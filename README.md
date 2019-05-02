@@ -1,4 +1,4 @@
-# booking-system
+# PC_BackgroundManagement
 
 > A Vue.js project
 
