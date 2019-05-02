@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import ThemeSetting from './themeSetting';
+import User from './User';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   modules: {
-    ThemeSetting
+    User
   }
 });
 

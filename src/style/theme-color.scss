@@ -1,6 +1,3 @@
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
-@import "~element-ui/packages/theme-chalk/src/index";
-
 html, body, .el-container {
   margin: 0;
   padding: 0;
@@ -39,4 +36,15 @@ html, body, .el-container {
     background: $dark-background-hover;
     color: $dark-font-color;
   }
+}
+
+.el-submenu__title i,
+.el-menu-item.is-active,
+.el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+  color: #fff !important;
+}
+
+.el-menu-item.is-active:hover,
+.el-menu--horizontal > .el-submenu.is-active .el-submenu__title:hover {
+  border-bottom: 2px solid rgb(47, 112, 202);
 }
