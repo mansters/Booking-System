@@ -5,6 +5,7 @@
       <div class="side-bar-item"
            v-for="functional in functionalList"
            :key="functional.icon"
+           @click="openDialog(functional.icon)"
       >
         <div>
           <span :class="['iconfont', functional.icon]"></span>
@@ -12,11 +13,14 @@
         </div>
       </div>
     </div>
+
+    <SongDialog :visible.sync="songDialogVisible" />
   </CollapseMenu>
 </template>
 
 <script>
   import CollapseMenu from './CollapseMenu'
+  import SongDialog from '@/components/Song/SongDialog'
 
 
   export default {
@@ -28,11 +32,23 @@
           {icon: 'icon-maikefeng', title: '点歌'},
           {icon: 'icon-nianling', title: '年龄'},
           {icon: 'icon-nv', title: '女团'}
-        ]
+        ],
+        songDialogVisible: true
+      }
+    },
+    methods: {
+      openDialog(icon) {
+        switch (icon) {
+          case 'icon-maikefeng': {
+            this.songDialogVisible = true;
+            break;
+          }
+        }
       }
     },
     components: {
-      CollapseMenu
+      CollapseMenu,
+      SongDialog
     }
   }
 </script>
