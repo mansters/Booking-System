@@ -15,8 +15,9 @@
     </div>
 
     <SongDialog :visible.sync="songDialogVisible" />
-    <OrderDialog :visible.sync="orderDialogVisible" @show-qr-code="showQrCode"/>
+    <OrderDialog :visible.sync="orderDialogVisible" @show-qr-code="showQrCode" />
     <QrCodeDialog :visible.sync="qrCodeDialogVisible" />
+    <SingerDialog :visible.sync="singerDialogVisible" @show-qr-code="showQrCode" />
   </CollapseMenu>
 </template>
 
@@ -25,6 +26,8 @@
   import SongDialog from '@/components/Song/SongDialog'
   import OrderDialog from '@/components/Order/OrderDialog';
   import QrCodeDialog from '@/components/QrCodeDialog';
+  import SingerDialog from '@/components/Singer/SingerDialog';
+
 
 
   export default {
@@ -34,12 +37,13 @@
         functionalList: [
           {icon: 'icon-diancan', title: '点餐'},
           {icon: 'icon-maikefeng', title: '点歌'},
-          {icon: 'icon-nianling', title: '年龄'},
+          {icon: 'icon-nianling', title: '寿命'},
           {icon: 'icon-nv', title: '女团'}
         ],
         songDialogVisible: false,
         orderDialogVisible: false,
         qrCodeDialogVisible: false,
+        singerDialogVisible: true,
       }
     },
     methods: {
@@ -53,6 +57,10 @@
             this.songDialogVisible = true;
             break;
           }
+          case 'icon-nv': {
+            this.singerDialogVisible = true;
+            break;
+          }
         }
       },
       showQrCode() {
@@ -63,7 +71,8 @@
       CollapseMenu,
       SongDialog,
       OrderDialog,
-      QrCodeDialog
+      QrCodeDialog,
+      SingerDialog
     }
   }
 </script>
