@@ -11,5 +11,12 @@ export default {
   },
   [types.ACTION.SIGN_UP]({commit}, user) {
     commit(types.MUTATION.STORE_NEW_USER, user);
+  },
+  [types.ACTION.SUBSCRIBE_MEMBER]({commit, state}){
+    const user = {...state.loginUser};
+    user.membership = {
+      expireDate: '2020-01-01'
+    };
+    commit(types.MUTATION.STORE_LOGIN_STATE, user);
   }
 }

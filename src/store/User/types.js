@@ -9,7 +9,8 @@ const types = {
   ACTION: generatorActions([
     'LOGIN',
     'LOGOUT',
-    'SIGN_UP'
+    'SIGN_UP',
+    'SUBSCRIBE_MEMBER'
   ]),
   MUTATION: generatorMutations([
     'STORE_LOGIN_STATE',

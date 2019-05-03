@@ -43,7 +43,7 @@
         songDialogVisible: false,
         orderDialogVisible: false,
         qrCodeDialogVisible: false,
-        singerDialogVisible: true,
+        singerDialogVisible: false,
       }
     },
     methods: {
@@ -72,7 +72,7 @@
       SongDialog,
       OrderDialog,
       QrCodeDialog,
-      SingerDialog
+      SingerDialog,
     }
   }
 </script>
