@@ -2,6 +2,8 @@ html, body, .el-container {
   margin: 0;
   padding: 0;
   height: 100vh;
+  overflow-x: hidden;
+  font-family: 'PingFang SC';
 }
 
 .el-header {

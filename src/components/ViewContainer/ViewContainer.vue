@@ -21,12 +21,12 @@
         </el-submenu>
 
         <UserDropdown  v-if="loginUser" class="nav-menu-right"/>
-        <li v-else
-            class="el-menu-item nav-menu-right"
-            @click="loginDialogVisible = true"
+        <el-menu-item v-else
+                      index="login"
+                      class="nav-menu-right"
         >
           登录
-        </li>
+        </el-menu-item>
       </el-menu>
     </el-header>
     <el-main>
@@ -90,10 +90,19 @@
   }
   .nav-menu-right {
     float: right !important;
-    color: #909399;
 
     &:hover {
       color: #000;
     }
+  }
+
+  .el-main {
+    padding: 0;
+  }
+
+  .view-container-main {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 30px 0;
   }
 </style>

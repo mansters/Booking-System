@@ -5,6 +5,8 @@ import LocalStorage from '@/utils/LocalStorage';
 
 import ViewContainer from '@/components/ViewContainer/ViewContainer';
 
+import Home from '@/router/Home/Home';
+
 Vue.use(Router)
 
 const router = new Router({
@@ -12,7 +14,10 @@ const router = new Router({
     {
       path: '/',
       name: 'ViewContainer',
-      component: ViewContainer
+      component: ViewContainer,
+      children: [
+        { path: '', name: 'Home', component: Home },
+      ]
     }
   ]
 })
