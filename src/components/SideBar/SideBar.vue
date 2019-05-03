@@ -15,12 +15,16 @@
     </div>
 
     <SongDialog :visible.sync="songDialogVisible" />
+    <OrderDialog :visible.sync="orderDialogVisible" @show-qr-code="showQrCode"/>
+    <QrCodeDialog :visible.sync="qrCodeDialogVisible" />
   </CollapseMenu>
 </template>
 
 <script>
   import CollapseMenu from './CollapseMenu'
   import SongDialog from '@/components/Song/SongDialog'
+  import OrderDialog from '@/components/Order/OrderDialog';
+  import QrCodeDialog from '@/components/QrCodeDialog';
 
 
   export default {
@@ -33,22 +37,33 @@
           {icon: 'icon-nianling', title: '年龄'},
           {icon: 'icon-nv', title: '女团'}
         ],
-        songDialogVisible: true
+        songDialogVisible: false,
+        orderDialogVisible: false,
+        qrCodeDialogVisible: false,
       }
     },
     methods: {
       openDialog(icon) {
         switch (icon) {
+          case 'icon-diancan': {
+            this.orderDialogVisible = true;
+            break;
+          }
           case 'icon-maikefeng': {
             this.songDialogVisible = true;
             break;
           }
         }
+      },
+      showQrCode() {
+        this.qrCodeDialogVisible = true;
       }
     },
     components: {
       CollapseMenu,
-      SongDialog
+      SongDialog,
+      OrderDialog,
+      QrCodeDialog
     }
   }
 </script>
