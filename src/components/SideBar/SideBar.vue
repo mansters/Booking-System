@@ -18,6 +18,7 @@
     <OrderDialog :visible.sync="orderDialogVisible" @show-qr-code="showQrCode" />
     <QrCodeDialog :visible.sync="qrCodeDialogVisible" />
     <SingerDialog :visible.sync="singerDialogVisible" @show-qr-code="showQrCode" />
+    <LifeTimeDialog :visible.sync="lifeTimeDialogVisible" />
   </CollapseMenu>
 </template>
 
@@ -27,6 +28,7 @@
   import OrderDialog from '@/components/Order/OrderDialog';
   import QrCodeDialog from '@/components/QrCodeDialog';
   import SingerDialog from '@/components/Singer/SingerDialog';
+  import LifeTimeDialog from '@/components/LifeTimeDialog';
 
 
 
@@ -44,6 +46,7 @@
         orderDialogVisible: false,
         qrCodeDialogVisible: false,
         singerDialogVisible: false,
+        lifeTimeDialogVisible: false
       }
     },
     methods: {
@@ -61,6 +64,10 @@
             this.singerDialogVisible = true;
             break;
           }
+          case 'icon-nianling': {
+            this.lifeTimeDialogVisible = true;
+            break;
+          }
         }
       },
       showQrCode() {
@@ -73,6 +80,7 @@
       OrderDialog,
       QrCodeDialog,
       SingerDialog,
+      LifeTimeDialog
     }
   }
 </script>
