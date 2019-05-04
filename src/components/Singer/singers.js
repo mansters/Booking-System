@@ -1,6 +1,6 @@
-import Rocket101 from '@/assets/Team/火箭少女101.jpeg';
-import GirlsGeneration    from '@/assets/Team/Girls Generation.png';
-import O2OGoddess     from '@/assets/Team/O2O Goddess.jpeg';
+import Rocket101 from '@/assets/Team/1.png';
+import GirlsGeneration    from '@/assets/Team/2.png';
+import O2OGoddess     from '@/assets/Team/3.png';
 
 
 export default [

@@ -78,6 +78,7 @@
   }
 
   .card__thumb img {
+    width: 400px;
     display: block;
     opacity: 1;
     -webkit-transform: scale(1);
