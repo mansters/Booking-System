@@ -1,45 +1,74 @@
 <template>
   <div class="untrustworthy-persons">
     <h1>失信人员名单</h1>
-    <el-row>
-      <el-col :span="8" v-for="item in 12" :key="item">
-        <div class="untrustworthy-persons-item">
-          <img :src="person.pic" alt="">
-          <div class="info">
-            <div class="info-item">姓名: {{person.name}}</div>
-            <div class="info-item">证件类型: {{person.idType}}</div>
-            <div class="info-item">证件号码: {{person.idNumber}}</div>
-            <div class="info-item">失信原因: {{person.reason}}</div>
-          </div>
-        </div>
-      </el-col>
-    </el-row>
-
+    <AnimateList :list="persons" />
   </div>
 </template>
 
 <script>
   import Icon_Person from '@/assets/Person.png';
+  import AnimateList from '@/components/AnimateList/AnimateList';
 
 
   export default {
     name: "UntrustworthyPersons",
     data() {
       return {
-        person: {
-          name    : '王小虎',
-          pic     : Icon_Person,
-          idType  : '身份证',
-          idNumber: '110120XXXXXXXX1239',
-          reason  : '动车组卫生间内吸烟'
-        }
+        persons: [
+          {
+            name    : '王小虎',
+            pic     : Icon_Person,
+            idType  : '身份证',
+            idNumber: '110120XXXXXXXX1239',
+            reason  : '动车组卫生间内吸烟'
+          },
+          {
+            name    : '王小虎',
+            pic     : Icon_Person,
+            idType  : '身份证',
+            idNumber: '110120XXXXXXXX1239',
+            reason  : '动车组卫生间内吸烟'
+          },
+          {
+            name    : '王小虎',
+            pic     : Icon_Person,
+            idType  : '身份证',
+            idNumber: '110120XXXXXXXX1239',
+            reason  : '动车组卫生间内吸烟'
+          },
+          {
+            name    : '王小虎',
+            pic     : Icon_Person,
+            idType  : '身份证',
+            idNumber: '110120XXXXXXXX1239',
+            reason  : '动车组卫生间内吸烟'
+          },
+          {
+            name    : '王小虎',
+            pic     : Icon_Person,
+            idType  : '身份证',
+            idNumber: '110120XXXXXXXX1239',
+            reason  : '动车组卫生间内吸烟'
+          },
+          {
+            name    : '王小虎',
+            pic     : Icon_Person,
+            idType  : '身份证',
+            idNumber: '110120XXXXXXXX1239',
+            reason  : '动车组卫生间内吸烟'
+          }
+        ]
       }
+    },
+    components: {
+      AnimateList
     }
   }
 </script>
 
 <style lang='scss' rel="stylesheet/scss" type="text/scss">
   .untrustworthy-persons {
+    color: #fff;
     h1 {
       text-align: center;
       font-size: 2em;

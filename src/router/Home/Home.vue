@@ -5,9 +5,11 @@
       <SliderCarousel/>
     </div>
     <div class="untrustworthy-persons">
-      <div class="view-container-main">
-        <UntrustworthyPersons/>
-      </div>
+      <AnimationBackground>
+        <div class="view-container-main">
+          <UntrustworthyPersons/>
+        </div>
+      </AnimationBackground>
     </div>
   </div>
 </template>
@@ -16,6 +18,7 @@
   import BannerCarousel       from './BannerCarousel';
   import SliderCarousel       from './SliderCarousel'
   import UntrustworthyPersons from './UntrustworthyPersons'
+  import AnimationBackground  from '@/components/AnimationBackground/AnimationBackground';
 
 
   export default {
@@ -23,7 +26,8 @@
     components: {
       BannerCarousel,
       SliderCarousel,
-      UntrustworthyPersons
+      UntrustworthyPersons,
+      AnimationBackground
     }
   }
 </script>
@@ -33,8 +37,8 @@
     width: 100%;
     height: 100%;
 
-    .untrustworthy-persons {
-      background: whitesmoke;
+    .untrustworthy-persons .animate-list-block {
+      margin-bottom: 100px;
     }
   }
 </style>

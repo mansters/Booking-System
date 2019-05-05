@@ -6,7 +6,9 @@
                background-color="#3B99FC"
                text-color="rgb(230, 230, 230)"
       >
-        <li class="el-menu-item nav-menu-icon">ICON</li>
+        <li class="nav-menu-icon">
+          <img :src="imgLogo" alt="">
+        </li>
         <el-menu-item index="index">首页</el-menu-item>
         <el-submenu index="2">
           <template slot="title">车票</template>
@@ -44,6 +46,7 @@
 <script>
   import {mapMutations, mapState}                  from 'vuex'
   import UserTypes, {namespace as UserNamespace} from '@/store/User/types';
+  import imgLogo from '@/assets/logo.png';
 
   import LoginFormDialog from './LoginFormDialog';
   import SignUpFormDialog from './SignUpFormDialog'
@@ -57,6 +60,7 @@
       return {
         loginDialogVisible: false,
         signUpDialogVisible: false,
+        imgLogo
       }
     },
     computed: {
@@ -87,6 +91,18 @@
   .nav-menu-icon {
     width: 150px;
     text-align: center;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    color: #909399;
+
+    img {
+      height: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
   }
   .nav-menu-right {
     float: right !important;
