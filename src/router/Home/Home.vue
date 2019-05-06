@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <BannerCarousel/>
+    <Banner />
     <div class="view-container-main">
       <SliderCarousel/>
     </div>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import BannerCarousel       from './BannerCarousel';
+  import Banner               from './Banner';
   import SliderCarousel       from './SliderCarousel'
   import UntrustworthyPersons from './UntrustworthyPersons'
   import AnimationBackground  from '@/components/AnimationBackground/AnimationBackground';
@@ -24,7 +24,7 @@
   export default {
     name      : "Home",
     components: {
-      BannerCarousel,
+      Banner,
       SliderCarousel,
       UntrustworthyPersons,
       AnimationBackground

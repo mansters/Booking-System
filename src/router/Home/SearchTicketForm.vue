@@ -1,6 +1,6 @@
 <template>
   <el-form ref="form" :model="formModel" label-width="80px">
-    <el-form-item label="出发地">
+    <el-form-item label="出发城市">
       <el-select v-model="formModel.departure" filterable placeholder="请选择">
         <el-option
           v-for="city in chineseCities"
@@ -11,7 +11,7 @@
       </el-select>
     </el-form-item>
 
-    <el-form-item label="目的地">
+    <el-form-item label="到达城市">
       <el-select v-model="formModel.arrival" filterable placeholder="请选择">
         <el-option
           v-for="city in chineseCities"
