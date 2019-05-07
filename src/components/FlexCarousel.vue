@@ -53,6 +53,7 @@
       margin: 0 auto;
       overflow: hidden;
       list-style: none;
+      padding: 0;
 
       li {
         float: left;
@@ -78,14 +79,14 @@
             width: 30px;
             margin: 0 auto;
             display: block;
-            font: 30px/30px Microsoft Yahei;
+            font: 30px/30px 'PingFang SC';
             position: relative;
             padding: 30px 0 0 0;
           }
+        }
 
-          &.active {
-            width: 402px;
-          }
+        &.active {
+          width: 402px;
         }
 
         .pic-auto {

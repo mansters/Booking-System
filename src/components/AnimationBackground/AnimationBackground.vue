@@ -46,8 +46,9 @@
 
 <style lang='scss' rel="stylesheet/scss" type="text/scss">
   .animation-background {
-    background: -webkit-linear-gradient(bottom right, #3F1344 10%, #4A1742 20%, #522357 50%, #5539B2);
-    background: linear-gradient(to top left, #3F1344 10%, #4A1742 20%, #522357 50%, #5539B2);
+    background: linear-gradient(to bottom right, #ddf4ff 0, #a5ffd9);
+    /*background: linear-gradient(to bottom right,#50a3a2 0,#53e3a6);*/
+    /*background: linear-gradient(to bottom right, #f5ddc2 0, #f8ebe0);*/
     height: 100%;
     width: 100%;
     overflow: hidden;

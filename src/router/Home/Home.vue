@@ -1,21 +1,19 @@
 <template>
   <div class="home-page">
-    <BannerCarousel/>
-    <div class="view-container-main">
-      <FlexCarousel :list="hotels" />
-    </div>
-    <div class="untrustworthy-persons">
-      <AnimationBackground>
-        <div class="view-container-main">
-          <UntrustworthyPersons/>
-        </div>
-      </AnimationBackground>
-    </div>
+    <Banner/>
+    <AnimationBackground>
+      <div class="content-container home-hotels-container">
+        <FlexCarousel :list="hotels"/>
+      </div>
+      <div class="content-container untrustworthy-persons">
+        <UntrustworthyPersons/>
+      </div>
+    </AnimationBackground>
   </div>
 </template>
 
 <script>
-  import BannerCarousel       from './BannerCarousel';
+  import Banner               from './Banner';
   import FlexCarousel         from '@/components/FlexCarousel';
   import UntrustworthyPersons from './UntrustworthyPersons'
   import AnimationBackground  from '@/components/AnimationBackground/AnimationBackground';
@@ -30,7 +28,7 @@
       }
     },
     components: {
-      BannerCarousel,
+      Banner,
       FlexCarousel,
       UntrustworthyPersons,
       AnimationBackground
@@ -42,6 +40,11 @@
   .home-page {
     width: 100%;
     height: 100%;
+
+    .home-hotels-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
     .untrustworthy-persons .animate-list-block {
       margin-bottom: 100px;

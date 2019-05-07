@@ -12,7 +12,7 @@
 
 <style lang='scss' rel="stylesheet/scss" type="text/scss">
   .animate-list-item {
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(110, 120, 130, 0.3);
     width: 100%;
     height: 100px;
     color: #fff;
@@ -26,7 +26,7 @@
     transition: all .5s;
 
     &:hover {
-      background-color: rgba(255, 255, 255, .6);
+      background-color: rgba(110, 120, 130, 0.6);
     }
   }
 </style>
