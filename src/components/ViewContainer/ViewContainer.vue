@@ -1,7 +1,8 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header height="auto" class="view-container-header">
       <el-menu mode="horizontal"
+               class="content-container"
                @select="onSelectMenu"
                background-color="#3B99FC"
                text-color="rgb(230, 230, 230)"
@@ -22,13 +23,16 @@
           <el-menu-item index="2-3">信息查询</el-menu-item>
         </el-submenu>
 
-        <UserDropdown  v-if="loginUser" class="nav-menu-right"/>
+        <UserDropdown v-if="loginUser" class="nav-menu-right"/>
         <el-menu-item v-else
                       index="login"
                       class="nav-menu-right"
         >
           登录
         </el-menu-item>
+        <li class="search-box nav-menu-right">
+          <el-input v-model="searchBox" placeholder="搜索"></el-input>
+        </li>
       </el-menu>
     </el-header>
     <el-main>
@@ -37,38 +41,39 @@
     </el-main>
 
     <template v-if="!loginUser">
-      <LoginFormDialog :visible.sync="loginDialogVisible" @open-sign-up-dialog="signUpDialogVisible = true" />
-      <SignUpFormDialog :visible.sync="signUpDialogVisible" />
+      <LoginFormDialog :visible.sync="loginDialogVisible" @open-sign-up-dialog="signUpDialogVisible = true"/>
+      <SignUpFormDialog :visible.sync="signUpDialogVisible"/>
     </template>
   </el-container>
 </template>
 
 <script>
-  import {mapMutations, mapState}                  from 'vuex'
+  import {mapMutations, mapState}                from 'vuex'
   import UserTypes, {namespace as UserNamespace} from '@/store/User/types';
-  import imgLogo from '@/assets/logo.png';
+  import imgLogo                                 from '@/assets/logo.png';
 
-  import LoginFormDialog from './LoginFormDialog';
+  import LoginFormDialog  from './LoginFormDialog';
   import SignUpFormDialog from './SignUpFormDialog'
-  import UserDropdown from './UserDropdown';
-  import SideBar from '@/components/SideBar/SideBar'
+  import UserDropdown     from './UserDropdown';
+  import SideBar          from '@/components/SideBar/SideBar'
 
 
   export default {
-    name    : "ViewContainer",
+    name      : "ViewContainer",
     data() {
       return {
-        loginDialogVisible: false,
+        loginDialogVisible : false,
         signUpDialogVisible: false,
-        imgLogo
+        imgLogo,
+        searchBox: ''
       }
     },
-    computed: {
+    computed  : {
       ...mapState(UserNamespace, [
         'loginUser'
       ])
     },
-    methods : {
+    methods   : {
       onSelectMenu(index) {
         switch (index) {
           case 'login': {
@@ -88,37 +93,51 @@
 </script>
 
 <style lang='scss' rel="stylesheet/scss" type="text/scss">
-  .nav-menu-icon {
-    width: 150px;
-    text-align: center;
-    float: left;
-    height: 60px;
-    line-height: 60px;
-    margin: 0;
-    border-bottom: 2px solid transparent;
-    color: #909399;
+  .view-container-header {
+    background-color: #3B99FC;
 
-    img {
-      height: 100%;
-      padding: 5px;
-      box-sizing: border-box;
+    .el-menu.el-menu--horizontal {
+      border: none;
     }
-  }
-  .nav-menu-right {
-    float: right !important;
 
-    &:hover {
-      color: #000;
+    .nav-menu-icon {
+      width: 150px;
+      text-align: center;
+      float: left;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      border-bottom: 2px solid transparent;
+      color: #909399;
+
+      img {
+        height: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+    }
+
+    .nav-menu-right {
+      float: right !important;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    .search-box {
+      width: 230px;
+      height: 60px;
+      line-height: 60px;
+      margin-right: 20px;
+
+      .el-input__inner {
+        border-radius: 30px;
+      }
     }
   }
 
   .el-main {
     padding: 0;
-  }
-
-  .view-container-main {
-    width: 70vw;
-    margin: 0 auto;
-    padding: 30px 0;
   }
 </style>
