@@ -2,7 +2,7 @@
   <div class="home-page">
     <BannerCarousel/>
     <div class="view-container-main">
-      <SliderCarousel/>
+      <FlexCarousel :list="hotels" />
     </div>
     <div class="untrustworthy-persons">
       <AnimationBackground>
@@ -16,16 +16,22 @@
 
 <script>
   import BannerCarousel       from './BannerCarousel';
-  import SliderCarousel       from './SliderCarousel'
+  import FlexCarousel         from '@/components/FlexCarousel';
   import UntrustworthyPersons from './UntrustworthyPersons'
   import AnimationBackground  from '@/components/AnimationBackground/AnimationBackground';
+  import HotelTypes           from './HotelTypes';
 
 
   export default {
     name      : "Home",
+    data() {
+      return {
+        hotels: HotelTypes
+      }
+    },
     components: {
       BannerCarousel,
-      SliderCarousel,
+      FlexCarousel,
       UntrustworthyPersons,
       AnimationBackground
     }
