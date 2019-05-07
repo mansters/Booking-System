@@ -36,7 +36,7 @@
       </el-menu>
     </el-header>
     <el-main>
-      <SideBar></SideBar>
+      <SideBar />
       <router-view></router-view>
     </el-main>
 
