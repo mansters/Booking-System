@@ -46,9 +46,7 @@
 
 <style lang='scss' rel="stylesheet/scss" type="text/scss">
   .animation-background {
-    background: linear-gradient(to bottom right, #ddf4ff 0, #a5ffd9);
-    /*background: linear-gradient(to bottom right,#50a3a2 0,#53e3a6);*/
-    /*background: linear-gradient(to bottom right, #f5ddc2 0, #f8ebe0);*/
+    background: linear-gradient(to bottom right, #76b2cf 0, #a5ffd9);
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -61,8 +59,9 @@
     }
 
     .circle:nth-child(1) {
-      background: #db92db;
-      box-shadow: 0 0 8px 7px #db92db;
+      /*background: hsla(0, 0%, 100%, .95);*/
+      background: hsla(0, 0%, 100%, .15);
+      box-shadow: 0 0 8px 7px rgba(255, 255, 255, 0.5);
       top: 85%;
       left: 22%;
       width: 42px;
@@ -73,8 +72,8 @@
     }
 
     .circle:nth-child(2) {
-      background: #7c2bad;
-      box-shadow: 0 0 5px 4px #7c2bad;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.5);
       top: 5%;
       left: 66%;
       width: 34px;
@@ -85,8 +84,8 @@
     }
 
     .circle:nth-child(3) {
-      background: #e0b6e6;
-      box-shadow: 0 0 1px 3px #e0b6e6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.5);
       top: 90%;
       left: 91%;
       width: 99px;
@@ -97,8 +96,8 @@
     }
 
     .circle:nth-child(4) {
-      background: #e094d4;
-      box-shadow: 0 0 10px 9px #e094d4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 9px rgba(255, 255, 255, 0.5);
       top: 29%;
       left: 42%;
       width: 62px;
@@ -109,8 +108,8 @@
     }
 
     .circle:nth-child(5) {
-      background: #b04ccc;
-      box-shadow: 0 0 6px 8px #b04ccc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 8px rgba(255, 255, 255, 0.5);
       top: 98%;
       left: 50%;
       width: 74px;
@@ -121,8 +120,8 @@
     }
 
     .circle:nth-child(6) {
-      background: #d7a3d5;
-      box-shadow: 0 0 1px 6px #d7a3d5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.5);
       top: 67%;
       left: 89%;
       width: 23px;
@@ -133,8 +132,8 @@
     }
 
     .circle:nth-child(7) {
-      background: #d77ec7;
-      box-shadow: 0 0 10px 5px #d77ec7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
       top: 70%;
       left: 62%;
       width: 63px;
@@ -145,8 +144,8 @@
     }
 
     .circle:nth-child(8) {
-      background: #983cbd;
-      box-shadow: 0 0 9px 5px #983cbd;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 5px rgba(255, 255, 255, 0.5);
       top: 41%;
       left: 90%;
       width: 62px;
@@ -157,8 +156,8 @@
     }
 
     .circle:nth-child(9) {
-      background: #e0b4e6;
-      box-shadow: 0 0 6px 5px #e0b4e6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.5);
       top: 84%;
       left: 90%;
       width: 40px;
@@ -169,8 +168,8 @@
     }
 
     .circle:nth-child(10) {
-      background: #9c3ab0;
-      box-shadow: 0 0 9px 5px #9c3ab0;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 5px rgba(255, 255, 255, 0.5);
       top: 5%;
       left: 63%;
       width: 69px;
@@ -181,8 +180,8 @@
     }
 
     .circle:nth-child(11) {
-      background: #8542b2;
-      box-shadow: 0 0 4px 7px #8542b2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 7px rgba(255, 255, 255, 0.5);
       top: 87%;
       left: 37%;
       width: 3px;
@@ -193,8 +192,8 @@
     }
 
     .circle:nth-child(12) {
-      background: #f777ee;
-      box-shadow: 0 0 8px 4px #f777ee;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5);
       top: 71%;
       left: 91%;
       width: 66px;
@@ -205,8 +204,8 @@
     }
 
     .circle:nth-child(13) {
-      background: #be6fde;
-      box-shadow: 0 0 7px 5px #be6fde;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.5);
       top: 17%;
       left: 52%;
       width: 59px;
@@ -217,8 +216,8 @@
     }
 
     .circle:nth-child(14) {
-      background: #db85c6;
-      box-shadow: 0 0 10px 8px #db85c6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 8px rgba(255, 255, 255, 0.5);
       top: 26%;
       left: 80%;
       width: 77px;
@@ -229,8 +228,8 @@
     }
 
     .circle:nth-child(15) {
-      background: #bd4cb4;
-      box-shadow: 0 0 9px 2px #bd4cb4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 2px rgba(255, 255, 255, 0.5);
       top: 7%;
       left: 100%;
       width: 18px;
@@ -241,8 +240,8 @@
     }
 
     .circle:nth-child(16) {
-      background: #bf70b6;
-      box-shadow: 0 0 6px 3px #bf70b6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.5);
       top: 51%;
       left: 25%;
       width: 52px;
@@ -253,8 +252,8 @@
     }
 
     .circle:nth-child(13) {
-      background: #be6fde;
-      box-shadow: 0 0 4px 2px #be6fde;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5);
       top: 58%;
       left: 67%;
       width: 36px;
@@ -265,8 +264,8 @@
     }
 
     .circle:nth-child(18) {
-      background: #deb8e9;
-      box-shadow: 0 0 7px 7px #deb8e9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.5);
       top: 64%;
       left: 67%;
       width: 28px;
@@ -277,8 +276,8 @@
     }
 
     .circle:nth-child(19) {
-      background: #b891d8;
-      box-shadow: 0 0 3px 1px #b891d8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
       top: 70%;
       left: 34%;
       width: 40px;
@@ -289,8 +288,8 @@
     }
 
     .circle:nth-child(20) {
-      background: #bb6bdc;
-      box-shadow: 0 0 2px 3px #bb6bdc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 3px rgba(255, 255, 255, 0.5);
       top: 37%;
       left: 46%;
       width: 72px;
@@ -301,8 +300,8 @@
     }
 
     .circle:nth-child(21) {
-      background: #b378d5;
-      box-shadow: 0 0 4px 5px #b378d5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 5px rgba(255, 255, 255, 0.5);
       top: 35%;
       left: 67%;
       width: 16px;
@@ -313,8 +312,8 @@
     }
 
     .circle:nth-child(22) {
-      background: #8d36da;
-      box-shadow: 0 0 7px 1px #8d36da;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 1px rgba(255, 255, 255, 0.5);
       top: 68%;
       left: 64%;
       width: 57px;
@@ -325,8 +324,8 @@
     }
 
     .circle:nth-child(23) {
-      background: #b444c8;
-      box-shadow: 0 0 10px 8px #b444c8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 8px rgba(255, 255, 255, 0.5);
       top: 89%;
       left: 34%;
       width: 19px;
@@ -337,8 +336,8 @@
     }
 
     .circle:nth-child(24) {
-      background: #b48cd5;
-      box-shadow: 0 0 2px 6px #b48cd5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 6px rgba(255, 255, 255, 0.5);
       top: 70%;
       left: 31%;
       width: 2px;
@@ -349,8 +348,8 @@
     }
 
     .circle:nth-child(25) {
-      background: #8f2aac;
-      box-shadow: 0 0 3px 6px #8f2aac;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 6px rgba(255, 255, 255, 0.5);
       top: 20%;
       left: 71%;
       width: 59px;
@@ -361,8 +360,8 @@
     }
 
     .circle:nth-child(26) {
-      background: #ae78db;
-      box-shadow: 0 0 10px 5px #ae78db;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
       top: 7%;
       left: 18%;
       width: 98px;
@@ -373,8 +372,8 @@
     }
 
     .circle:nth-child(27) {
-      background: #dd7dd1;
-      box-shadow: 0 0 6px 9px #dd7dd1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 9px rgba(255, 255, 255, 0.5);
       top: 95%;
       left: 82%;
       width: 51px;
@@ -385,8 +384,8 @@
     }
 
     .circle:nth-child(28) {
-      background: #d95dc3;
-      box-shadow: 0 0 7px 2px #d95dc3;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.5);
       top: 83%;
       left: 88%;
       width: 65px;
@@ -397,8 +396,8 @@
     }
 
     .circle:nth-child(29) {
-      background: #b64daa;
-      box-shadow: 0 0 7px 5px #b64daa;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.5);
       top: 10%;
       left: 94%;
       width: 90px;
@@ -409,8 +408,8 @@
     }
 
     .circle:nth-child(30) {
-      background: #c944ab;
-      box-shadow: 0 0 10px 5px #c944ab;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
       top: 90%;
       left: 90%;
       width: 21px;
@@ -421,8 +420,8 @@
     }
 
     .circle:nth-child(31) {
-      background: #c34fe1;
-      box-shadow: 0 0 8px 1px #c34fe1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5);
       top: 43%;
       left: 16%;
       width: 18px;
@@ -433,8 +432,8 @@
     }
 
     .circle:nth-child(30) {
-      background: #c944ab;
-      box-shadow: 0 0 4px 4px #c944ab;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.5);
       top: 47%;
       left: 19%;
       width: 54px;
@@ -445,8 +444,8 @@
     }
 
     .circle:nth-child(33) {
-      background: #913cb4;
-      box-shadow: 0 0 1px 5px #913cb4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 5px rgba(255, 255, 255, 0.5);
       top: 1%;
       left: 94%;
       width: 14px;
@@ -457,8 +456,8 @@
     }
 
     .circle:nth-child(34) {
-      background: #e4cfeb;
-      box-shadow: 0 0 5px 10px #e4cfeb;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5);
       top: 95%;
       left: 64%;
       width: 43px;
@@ -469,8 +468,8 @@
     }
 
     .circle:nth-child(35) {
-      background: #9637b6;
-      box-shadow: 0 0 5px 5px #9637b6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
       top: 48%;
       left: 12%;
       width: 26px;
@@ -481,8 +480,8 @@
     }
 
     .circle:nth-child(36) {
-      background: #efa6e9;
-      box-shadow: 0 0 3px 1px #efa6e9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
       top: 61%;
       left: 65%;
       width: 27px;
@@ -493,8 +492,8 @@
     }
 
     .circle:nth-child(37) {
-      background: #dc59c1;
-      box-shadow: 0 0 1px 6px #dc59c1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.5);
       top: 84%;
       left: 79%;
       width: 52px;
@@ -505,8 +504,8 @@
     }
 
     .circle:nth-child(38) {
-      background: #a551e3;
-      box-shadow: 0 0 10px 5px #a551e3;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
       top: 20%;
       left: 81%;
       width: 91px;
@@ -517,8 +516,8 @@
     }
 
     .circle:nth-child(36) {
-      background: #efa6e9;
-      box-shadow: 0 0 6px 6px #efa6e9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.5);
       top: 62%;
       left: 12%;
       width: 96px;
@@ -529,8 +528,8 @@
     }
 
     .circle:nth-child(40) {
-      background: #dcb5ec;
-      box-shadow: 0 0 8px 2px #dcb5ec;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.5);
       top: 37%;
       left: 31%;
       width: 34px;
@@ -541,8 +540,8 @@
     }
 
     .circle:nth-child(41) {
-      background: #9968e6;
-      box-shadow: 0 0 4px 3px #9968e6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 3px rgba(255, 255, 255, 0.5);
       top: 97%;
       left: 23%;
       width: 33px;
@@ -553,8 +552,8 @@
     }
 
     .circle:nth-child(27) {
-      background: #dd7dd1;
-      box-shadow: 0 0 8px 6px #dd7dd1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0.5);
       top: 18%;
       left: 56%;
       width: 99px;
@@ -565,8 +564,8 @@
     }
 
     .circle:nth-child(43) {
-      background: #e29dda;
-      box-shadow: 0 0 7px 4px #e29dda;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 4px rgba(255, 255, 255, 0.5);
       top: 35%;
       left: 48%;
       width: 97px;
@@ -577,8 +576,8 @@
     }
 
     .circle:nth-child(23) {
-      background: #b444c8;
-      box-shadow: 0 0 8px 2px #b444c8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.5);
       top: 10%;
       left: 99%;
       width: 31px;
@@ -589,8 +588,8 @@
     }
 
     .circle:nth-child(45) {
-      background: #9d3cac;
-      box-shadow: 0 0 9px 7px #9d3cac;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 7px rgba(255, 255, 255, 0.5);
       top: 23%;
       left: 34%;
       width: 97px;
@@ -601,8 +600,8 @@
     }
 
     .circle:nth-child(46) {
-      background: #b286d9;
-      box-shadow: 0 0 5px 7px #b286d9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.5);
       top: 87%;
       left: 76%;
       width: 87px;
@@ -613,8 +612,8 @@
     }
 
     .circle:nth-child(47) {
-      background: #c248c5;
-      box-shadow: 0 0 5px 6px #c248c5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 6px rgba(255, 255, 255, 0.5);
       top: 36%;
       left: 5%;
       width: 72px;
@@ -625,8 +624,8 @@
     }
 
     .circle:nth-child(48) {
-      background: #b280c4;
-      box-shadow: 0 0 6px 4px #b280c4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 4px rgba(255, 255, 255, 0.5);
       top: 64%;
       left: 12%;
       width: 79px;
@@ -637,8 +636,8 @@
     }
 
     .circle:nth-child(49) {
-      background: #d85ec5;
-      box-shadow: 0 0 3px 4px #d85ec5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 4px rgba(255, 255, 255, 0.5);
       top: 92%;
       left: 93%;
       width: 55px;
@@ -649,8 +648,8 @@
     }
 
     .circle:nth-child(50) {
-      background: #d562c7;
-      box-shadow: 0 0 5px 8px #d562c7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 8px rgba(255, 255, 255, 0.5);
       top: 6%;
       left: 94%;
       width: 28px;
@@ -661,8 +660,8 @@
     }
 
     .circle:nth-child(51) {
-      background: #dd8ad3;
-      box-shadow: 0 0 8px 10px #dd8ad3;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 10px rgba(255, 255, 255, 0.5);
       top: 56%;
       left: 14%;
       width: 93px;
@@ -673,8 +672,8 @@
     }
 
     .circle:nth-child(27) {
-      background: #dd7dd1;
-      box-shadow: 0 0 1px 4px #dd7dd1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.5);
       top: 1%;
       left: 97%;
       width: 7px;
@@ -685,8 +684,8 @@
     }
 
     .circle:nth-child(53) {
-      background: #da95ce;
-      box-shadow: 0 0 1px 5px #da95ce;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 5px rgba(255, 255, 255, 0.5);
       top: 10%;
       left: 16%;
       width: 10px;
@@ -697,8 +696,8 @@
     }
 
     .circle:nth-child(54) {
-      background: #a83e9a;
-      box-shadow: 0 0 5px 8px #a83e9a;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 8px rgba(255, 255, 255, 0.5);
       top: 49%;
       left: 62%;
       width: 70px;
@@ -709,8 +708,8 @@
     }
 
     .circle:nth-child(55) {
-      background: #c155d8;
-      box-shadow: 0 0 10px 6px #c155d8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.5);
       top: 23%;
       left: 27%;
       width: 16px;
@@ -721,8 +720,8 @@
     }
 
     .circle:nth-child(56) {
-      background: #c545a5;
-      box-shadow: 0 0 3px 4px #c545a5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 4px rgba(255, 255, 255, 0.5);
       top: 90%;
       left: 25%;
       width: 44px;
@@ -733,8 +732,8 @@
     }
 
     .circle:nth-child(24) {
-      background: #b48cd5;
-      box-shadow: 0 0 1px 8px #b48cd5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 8px rgba(255, 255, 255, 0.5);
       top: 5%;
       left: 51%;
       width: 26px;
@@ -745,8 +744,8 @@
     }
 
     .circle:nth-child(8) {
-      background: #983cbd;
-      box-shadow: 0 0 8px 6px #983cbd;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0.5);
       top: 95%;
       left: 94%;
       width: 96px;
@@ -757,8 +756,8 @@
     }
 
     .circle:nth-child(59) {
-      background: #c4a4d6;
-      box-shadow: 0 0 7px 6px #c4a4d6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 6px rgba(255, 255, 255, 0.5);
       top: 79%;
       left: 82%;
       width: 50px;
@@ -769,8 +768,8 @@
     }
 
     .circle:nth-child(60) {
-      background: #7b38c4;
-      box-shadow: 0 0 2px 8px #7b38c4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 8px rgba(255, 255, 255, 0.5);
       top: 38%;
       left: 84%;
       width: 81px;
@@ -781,8 +780,8 @@
     }
 
     .circle:nth-child(24) {
-      background: #b48cd5;
-      box-shadow: 0 0 10px 2px #b48cd5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
       top: 52%;
       left: 16%;
       width: 93px;
@@ -793,8 +792,8 @@
     }
 
     .circle:nth-child(62) {
-      background: #b852bf;
-      box-shadow: 0 0 9px 8px #b852bf;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 8px rgba(255, 255, 255, 0.5);
       top: 29%;
       left: 47%;
       width: 48px;
@@ -805,8 +804,8 @@
     }
 
     .circle:nth-child(63) {
-      background: #a644cc;
-      box-shadow: 0 0 5px 8px #a644cc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 8px rgba(255, 255, 255, 0.5);
       top: 26%;
       left: 39%;
       width: 20px;
@@ -817,8 +816,8 @@
     }
 
     .circle:nth-child(64) {
-      background: #9750c4;
-      box-shadow: 0 0 1px 4px #9750c4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.5);
       top: 77%;
       left: 79%;
       width: 100px;
@@ -829,8 +828,8 @@
     }
 
     .circle:nth-child(21) {
-      background: #b378d5;
-      box-shadow: 0 0 7px 10px #b378d5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 10px rgba(255, 255, 255, 0.5);
       top: 25%;
       left: 77%;
       width: 30px;
@@ -841,8 +840,8 @@
     }
 
     .circle:nth-child(54) {
-      background: #a83e9a;
-      box-shadow: 0 0 4px 9px #a83e9a;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 9px rgba(255, 255, 255, 0.5);
       top: 86%;
       left: 48%;
       width: 16px;
@@ -853,8 +852,8 @@
     }
 
     .circle:nth-child(67) {
-      background: #e4d4f3;
-      box-shadow: 0 0 6px 3px #e4d4f3;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.5);
       top: 3%;
       left: 7%;
       width: 53px;
@@ -865,8 +864,8 @@
     }
 
     .circle:nth-child(68) {
-      background: #a33bb8;
-      box-shadow: 0 0 8px 10px #a33bb8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 10px rgba(255, 255, 255, 0.5);
       top: 83%;
       left: 71%;
       width: 60px;
@@ -877,8 +876,8 @@
     }
 
     .circle:nth-child(19) {
-      background: #b891d8;
-      box-shadow: 0 0 8px 8px #b891d8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.5);
       top: 30%;
       left: 97%;
       width: 52px;
@@ -889,8 +888,8 @@
     }
 
     .circle:nth-child(70) {
-      background: #e5c0e3;
-      box-shadow: 0 0 9px 1px #e5c0e3;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.5);
       top: 66%;
       left: 17%;
       width: 68px;
@@ -901,8 +900,8 @@
     }
 
     .circle:nth-child(71) {
-      background: #9f80e8;
-      box-shadow: 0 0 10px 9px #9f80e8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 9px rgba(255, 255, 255, 0.5);
       top: 53%;
       left: 44%;
       width: 89px;
@@ -913,8 +912,8 @@
     }
 
     .circle:nth-child(33) {
-      background: #913cb4;
-      box-shadow: 0 0 2px 7px #913cb4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 7px rgba(255, 255, 255, 0.5);
       top: 91%;
       left: 70%;
       width: 20px;
@@ -925,8 +924,8 @@
     }
 
     .circle:nth-child(73) {
-      background: #6f38dc;
-      box-shadow: 0 0 9px 4px #6f38dc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 4px rgba(255, 255, 255, 0.5);
       top: 71%;
       left: 96%;
       width: 34px;
@@ -937,8 +936,8 @@
     }
 
     .circle:nth-child(74) {
-      background: #b63ab7;
-      box-shadow: 0 0 6px 5px #b63ab7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.5);
       top: 18%;
       left: 36%;
       width: 59px;
@@ -949,8 +948,8 @@
     }
 
     .circle:nth-child(75) {
-      background: #9937c2;
-      box-shadow: 0 0 3px 2px #9937c2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 2px rgba(255, 255, 255, 0.5);
       top: 76%;
       left: 48%;
       width: 21px;
@@ -961,8 +960,8 @@
     }
 
     .circle:nth-child(76) {
-      background: #b487df;
-      box-shadow: 0 0 8px 6px #b487df;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0.5);
       top: 34%;
       left: 57%;
       width: 23px;
@@ -973,8 +972,8 @@
     }
 
     .circle:nth-child(77) {
-      background: #b838ae;
-      box-shadow: 0 0 3px 4px #b838ae;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 4px rgba(255, 255, 255, 0.5);
       top: 95%;
       left: 39%;
       width: 85px;
@@ -985,8 +984,8 @@
     }
 
     .circle:nth-child(78) {
-      background: #cb50b6;
-      box-shadow: 0 0 5px 9px #cb50b6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 9px rgba(255, 255, 255, 0.5);
       top: 98%;
       left: 37%;
       width: 12px;
@@ -997,8 +996,8 @@
     }
 
     .circle:nth-child(54) {
-      background: #a83e9a;
-      box-shadow: 0 0 6px 8px #a83e9a;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 8px rgba(255, 255, 255, 0.5);
       top: 78%;
       left: 17%;
       width: 40px;
@@ -1009,8 +1008,8 @@
     }
 
     .circle:nth-child(20) {
-      background: #bb6bdc;
-      box-shadow: 0 0 4px 2px #bb6bdc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5);
       top: 47%;
       left: 6%;
       width: 36px;
@@ -1021,8 +1020,8 @@
     }
 
     .circle:nth-child(81) {
-      background: #de8ed9;
-      box-shadow: 0 0 10px 4px #de8ed9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.5);
       top: 18%;
       left: 20%;
       width: 54px;
@@ -1033,8 +1032,8 @@
     }
 
     .circle:nth-child(82) {
-      background: #b051c1;
-      box-shadow: 0 0 9px 2px #b051c1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 2px rgba(255, 255, 255, 0.5);
       top: 86%;
       left: 45%;
       width: 56px;
@@ -1045,8 +1044,8 @@
     }
 
     .circle:nth-child(83) {
-      background: #893ad4;
-      box-shadow: 0 0 1px 6px #893ad4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 6px rgba(255, 255, 255, 0.5);
       top: 9%;
       left: 27%;
       width: 29px;
@@ -1057,8 +1056,8 @@
     }
 
     .circle:nth-child(84) {
-      background: #c088c7;
-      box-shadow: 0 0 2px 5px #c088c7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 5px rgba(255, 255, 255, 0.5);
       top: 96%;
       left: 84%;
       width: 58px;
@@ -1069,8 +1068,8 @@
     }
 
     .circle:nth-child(85) {
-      background: #e3bae8;
-      box-shadow: 0 0 4px 2px #e3bae8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5);
       top: 11%;
       left: 72%;
       width: 77px;
@@ -1081,8 +1080,8 @@
     }
 
     .circle:nth-child(86) {
-      background: #d450bd;
-      box-shadow: 0 0 6px 9px #d450bd;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 9px rgba(255, 255, 255, 0.5);
       top: 55%;
       left: 21%;
       width: 91px;
@@ -1093,8 +1092,8 @@
     }
 
     .circle:nth-child(87) {
-      background: #983b9e;
-      box-shadow: 0 0 6px 9px #983b9e;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 9px rgba(255, 255, 255, 0.5);
       top: 20%;
       left: 47%;
       width: 54px;
@@ -1105,8 +1104,8 @@
     }
 
     .circle:nth-child(88) {
-      background: #e7c1e4;
-      box-shadow: 0 0 9px 9px #e7c1e4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.5);
       top: 23%;
       left: 64%;
       width: 86px;
@@ -1117,8 +1116,8 @@
     }
 
     .circle:nth-child(76) {
-      background: #b487df;
-      box-shadow: 0 0 9px 4px #b487df;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 4px rgba(255, 255, 255, 0.5);
       top: 46%;
       left: 90%;
       width: 85px;
@@ -1129,8 +1128,8 @@
     }
 
     .circle:nth-child(90) {
-      background: #7022b6;
-      box-shadow: 0 0 7px 6px #7022b6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 6px rgba(255, 255, 255, 0.5);
       top: 96%;
       left: 33%;
       width: 64px;
@@ -1141,8 +1140,8 @@
     }
 
     .circle:nth-child(11) {
-      background: #8542b2;
-      box-shadow: 0 0 5px 4px #8542b2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.5);
       top: 67%;
       left: 47%;
       width: 45px;
@@ -1153,8 +1152,8 @@
     }
 
     .circle:nth-child(92) {
-      background: #b952b7;
-      box-shadow: 0 0 4px 9px #b952b7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 9px rgba(255, 255, 255, 0.5);
       top: 89%;
       left: 82%;
       width: 44px;
@@ -1165,8 +1164,8 @@
     }
 
     .circle:nth-child(93) {
-      background: #a947a7;
-      box-shadow: 0 0 6px 5px #a947a7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.5);
       top: 60%;
       left: 96%;
       width: 35px;
@@ -1177,8 +1176,8 @@
     }
 
     .circle:nth-child(7) {
-      background: #d77ec7;
-      box-shadow: 0 0 10px 3px #d77ec7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
       top: 75%;
       left: 94%;
       width: 65px;
@@ -1189,8 +1188,8 @@
     }
 
     .circle:nth-child(95) {
-      background: #c16bda;
-      box-shadow: 0 0 3px 3px #c16bda;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
       top: 94%;
       left: 19%;
       width: 17px;
@@ -1201,8 +1200,8 @@
     }
 
     .circle:nth-child(96) {
-      background: #bf82cc;
-      box-shadow: 0 0 5px 7px #bf82cc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.5);
       top: 86%;
       left: 5%;
       width: 71px;
@@ -1213,8 +1212,8 @@
     }
 
     .circle:nth-child(56) {
-      background: #c545a5;
-      box-shadow: 0 0 6px 5px #c545a5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.5);
       top: 35%;
       left: 85%;
       width: 6px;
@@ -1225,8 +1224,8 @@
     }
 
     .circle:nth-child(67) {
-      background: #e4d4f3;
-      box-shadow: 0 0 2px 1px #e4d4f3;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
       top: 55%;
       left: 21%;
       width: 11px;
@@ -1237,8 +1236,8 @@
     }
 
     .circle:nth-child(99) {
-      background: #e05dce;
-      box-shadow: 0 0 7px 10px #e05dce;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 10px rgba(255, 255, 255, 0.5);
       top: 93%;
       left: 54%;
       width: 97px;
@@ -1249,8 +1248,8 @@
     }
 
     .circle:nth-child(100) {
-      background: #d982d5;
-      box-shadow: 0 0 7px 10px #d982d5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 10px rgba(255, 255, 255, 0.5);
       top: 65%;
       left: 37%;
       width: 84px;
@@ -1261,8 +1260,8 @@
     }
 
     .circle:nth-child(35) {
-      background: #9637b6;
-      box-shadow: 0 0 5px 2px #9637b6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
       top: 54%;
       left: 12%;
       width: 79px;
@@ -1273,8 +1272,8 @@
     }
 
     .circle:nth-child(102) {
-      background: #ac69c2;
-      box-shadow: 0 0 4px 3px #ac69c2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 3px rgba(255, 255, 255, 0.5);
       top: 80%;
       left: 34%;
       width: 80px;
@@ -1285,8 +1284,8 @@
     }
 
     .circle:nth-child(103) {
-      background: #8230a9;
-      box-shadow: 0 0 5px 6px #8230a9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 6px rgba(255, 255, 255, 0.5);
       top: 66%;
       left: 92%;
       width: 51px;
@@ -1297,8 +1296,8 @@
     }
 
     .circle:nth-child(4) {
-      background: #e094d4;
-      box-shadow: 0 0 5px 10px #e094d4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5);
       top: 21%;
       left: 10%;
       width: 92px;
@@ -1309,8 +1308,8 @@
     }
 
     .circle:nth-child(49) {
-      background: #d85ec5;
-      box-shadow: 0 0 2px 1px #d85ec5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
       top: 24%;
       left: 52%;
       width: 47px;
@@ -1321,8 +1320,8 @@
     }
 
     .circle:nth-child(106) {
-      background: #ac35c0;
-      box-shadow: 0 0 6px 6px #ac35c0;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.5);
       top: 95%;
       left: 53%;
       width: 2px;
@@ -1333,8 +1332,8 @@
     }
 
     .circle:nth-child(107) {
-      background: #c56fd2;
-      box-shadow: 0 0 1px 4px #c56fd2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 4px rgba(255, 255, 255, 0.5);
       top: 48%;
       left: 52%;
       width: 51px;
@@ -1345,8 +1344,8 @@
     }
 
     .circle:nth-child(108) {
-      background: #ec6bdc;
-      box-shadow: 0 0 9px 10px #ec6bdc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 10px rgba(255, 255, 255, 0.5);
       top: 50%;
       left: 1%;
       width: 79px;
@@ -1357,8 +1356,8 @@
     }
 
     .circle:nth-child(109) {
-      background: #ba4cac;
-      box-shadow: 0 0 4px 3px #ba4cac;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 3px rgba(255, 255, 255, 0.5);
       top: 45%;
       left: 18%;
       width: 88px;
@@ -1369,8 +1368,8 @@
     }
 
     .circle:nth-child(110) {
-      background: #e1b8e4;
-      box-shadow: 0 0 5px 10px #e1b8e4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5);
       top: 88%;
       left: 97%;
       width: 66px;
@@ -1381,8 +1380,8 @@
     }
 
     .circle:nth-child(111) {
-      background: #b98de2;
-      box-shadow: 0 0 2px 7px #b98de2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 7px rgba(255, 255, 255, 0.5);
       top: 20%;
       left: 13%;
       width: 40px;
@@ -1393,8 +1392,8 @@
     }
 
     .circle:nth-child(27) {
-      background: #dd7dd1;
-      box-shadow: 0 0 8px 8px #dd7dd1;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.5);
       top: 97%;
       left: 2%;
       width: 2px;
@@ -1405,8 +1404,8 @@
     }
 
     .circle:nth-child(113) {
-      background: #d85abb;
-      box-shadow: 0 0 9px 5px #d85abb;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 5px rgba(255, 255, 255, 0.5);
       top: 8%;
       left: 98%;
       width: 39px;
@@ -1417,8 +1416,8 @@
     }
 
     .circle:nth-child(87) {
-      background: #983b9e;
-      box-shadow: 0 0 5px 4px #983b9e;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.5);
       top: 63%;
       left: 100%;
       width: 98px;
@@ -1429,8 +1428,8 @@
     }
 
     .circle:nth-child(115) {
-      background: #d38eda;
-      box-shadow: 0 0 4px 4px #d38eda;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.5);
       top: 62%;
       left: 71%;
       width: 55px;
@@ -1441,8 +1440,8 @@
     }
 
     .circle:nth-child(116) {
-      background: #ba67df;
-      box-shadow: 0 0 8px 3px #ba67df;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.5);
       top: 45%;
       left: 38%;
       width: 57px;
@@ -1453,8 +1452,8 @@
     }
 
     .circle:nth-child(117) {
-      background: #c36bd5;
-      box-shadow: 0 0 4px 6px #c36bd5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 6px rgba(255, 255, 255, 0.5);
       top: 30%;
       left: 33%;
       width: 36px;
@@ -1465,8 +1464,8 @@
     }
 
     .circle:nth-child(56) {
-      background: #c545a5;
-      box-shadow: 0 0 9px 8px #c545a5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 8px rgba(255, 255, 255, 0.5);
       top: 86%;
       left: 29%;
       width: 13px;
@@ -1477,8 +1476,8 @@
     }
 
     .circle:nth-child(119) {
-      background: #e3bdec;
-      box-shadow: 0 0 4px 9px #e3bdec;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 9px rgba(255, 255, 255, 0.5);
       top: 45%;
       left: 100%;
       width: 2px;
@@ -1489,8 +1488,8 @@
     }
 
     .circle:nth-child(120) {
-      background: #8d2dca;
-      box-shadow: 0 0 5px 5px #8d2dca;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
       top: 69%;
       left: 52%;
       width: 100px;
@@ -1501,8 +1500,8 @@
     }
 
     .circle:nth-child(121) {
-      background: #e8ebfa;
-      box-shadow: 0 0 10px 10px #e8ebfa;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
       top: 63%;
       left: 99%;
       width: 73px;
@@ -1513,8 +1512,8 @@
     }
 
     .circle:nth-child(18) {
-      background: #deb8e9;
-      box-shadow: 0 0 8px 7px #deb8e9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 7px rgba(255, 255, 255, 0.5);
       top: 46%;
       left: 9%;
       width: 24px;
@@ -1525,8 +1524,8 @@
     }
 
     .circle:nth-child(123) {
-      background: #ad48c0;
-      box-shadow: 0 0 8px 2px #ad48c0;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.5);
       top: 73%;
       left: 4%;
       width: 67px;
@@ -1537,8 +1536,8 @@
     }
 
     .circle:nth-child(124) {
-      background: #c27fe9;
-      box-shadow: 0 0 8px 6px #c27fe9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0.5);
       top: 39%;
       left: 95%;
       width: 30px;
@@ -1549,8 +1548,8 @@
     }
 
     .circle:nth-child(125) {
-      background: #ad46ad;
-      box-shadow: 0 0 9px 5px #ad46ad;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 5px rgba(255, 255, 255, 0.5);
       top: 35%;
       left: 26%;
       width: 95px;
@@ -1561,8 +1560,8 @@
     }
 
     .circle:nth-child(53) {
-      background: #da95ce;
-      box-shadow: 0 0 3px 3px #da95ce;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
       top: 16%;
       left: 43%;
       width: 52px;
@@ -1573,8 +1572,8 @@
     }
 
     .circle:nth-child(127) {
-      background: #6e44c2;
-      box-shadow: 0 0 10px 10px #6e44c2;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
       top: 34%;
       left: 40%;
       width: 1px;
@@ -1585,8 +1584,8 @@
     }
 
     .circle:nth-child(103) {
-      background: #8230a9;
-      box-shadow: 0 0 2px 7px #8230a9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 7px rgba(255, 255, 255, 0.5);
       top: 53%;
       left: 50%;
       width: 23px;
@@ -1597,8 +1596,8 @@
     }
 
     .circle:nth-child(129) {
-      background: #a135d8;
-      box-shadow: 0 0 7px 4px #a135d8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 4px rgba(255, 255, 255, 0.5);
       top: 74%;
       left: 20%;
       width: 36px;
@@ -1609,8 +1608,8 @@
     }
 
     .circle:nth-child(86) {
-      background: #d450bd;
-      box-shadow: 0 0 6px 5px #d450bd;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.5);
       top: 81%;
       left: 21%;
       width: 93px;
@@ -1621,8 +1620,8 @@
     }
 
     .circle:nth-child(131) {
-      background: #eb8ef0;
-      box-shadow: 0 0 10px 1px #eb8ef0;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.5);
       top: 31%;
       left: 44%;
       width: 83px;
@@ -1633,8 +1632,8 @@
     }
 
     .circle:nth-child(63) {
-      background: #a644cc;
-      box-shadow: 0 0 8px 6px #a644cc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0.5);
       top: 61%;
       left: 69%;
       width: 77px;
@@ -1645,8 +1644,8 @@
     }
 
     .circle:nth-child(133) {
-      background: #9f87d8;
-      box-shadow: 0 0 10px 6px #9f87d8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.5);
       top: 44%;
       left: 82%;
       width: 14px;
@@ -1657,8 +1656,8 @@
     }
 
     .circle:nth-child(134) {
-      background: #e066c9;
-      box-shadow: 0 0 9px 2px #e066c9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 2px rgba(255, 255, 255, 0.5);
       top: 93%;
       left: 12%;
       width: 77px;
@@ -1669,8 +1668,8 @@
     }
 
     .circle:nth-child(135) {
-      background: #c94ca9;
-      box-shadow: 0 0 6px 5px #c94ca9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.5);
       top: 81%;
       left: 29%;
       width: 6px;
@@ -1681,8 +1680,8 @@
     }
 
     .circle:nth-child(25) {
-      background: #8f2aac;
-      box-shadow: 0 0 6px 8px #8f2aac;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 6px 8px rgba(255, 255, 255, 0.5);
       top: 96%;
       left: 97%;
       width: 97px;
@@ -1693,8 +1692,8 @@
     }
 
     .circle:nth-child(137) {
-      background: #8239b8;
-      box-shadow: 0 0 1px 7px #8239b8;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 7px rgba(255, 255, 255, 0.5);
       top: 37%;
       left: 42%;
       width: 54px;
@@ -1705,8 +1704,8 @@
     }
 
     .circle:nth-child(135) {
-      background: #c94ca9;
-      box-shadow: 0 0 5px 9px #c94ca9;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 5px 9px rgba(255, 255, 255, 0.5);
       top: 32%;
       left: 77%;
       width: 74px;
@@ -1717,8 +1716,8 @@
     }
 
     .circle:nth-child(139) {
-      background: #d386c6;
-      box-shadow: 0 0 10px 8px #d386c6;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 8px rgba(255, 255, 255, 0.5);
       top: 71%;
       left: 96%;
       width: 100px;
@@ -1729,8 +1728,8 @@
     }
 
     .circle:nth-child(140) {
-      background: #ce89d7;
-      box-shadow: 0 0 10px 4px #ce89d7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.5);
       top: 71%;
       left: 14%;
       width: 4px;
@@ -1741,8 +1740,8 @@
     }
 
     .circle:nth-child(96) {
-      background: #bf82cc;
-      box-shadow: 0 0 2px 5px #bf82cc;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 5px rgba(255, 255, 255, 0.5);
       top: 19%;
       left: 14%;
       width: 70px;
@@ -1753,8 +1752,8 @@
     }
 
     .circle:nth-child(142) {
-      background: #dcb2ed;
-      box-shadow: 0 0 2px 4px #dcb2ed;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.5);
       top: 27%;
       left: 14%;
       width: 69px;
@@ -1765,8 +1764,8 @@
     }
 
     .circle:nth-child(47) {
-      background: #c248c5;
-      box-shadow: 0 0 1px 9px #c248c5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 1px 9px rgba(255, 255, 255, 0.5);
       top: 39%;
       left: 53%;
       width: 41px;
@@ -1777,8 +1776,8 @@
     }
 
     .circle:nth-child(93) {
-      background: #a947a7;
-      box-shadow: 0 0 3px 1px #a947a7;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
       top: 69%;
       left: 79%;
       width: 35px;
@@ -1789,8 +1788,8 @@
     }
 
     .circle:nth-child(145) {
-      background: #9c74ce;
-      box-shadow: 0 0 2px 8px #9c74ce;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 8px rgba(255, 255, 255, 0.5);
       top: 63%;
       left: 19%;
       width: 22px;
@@ -1801,8 +1800,8 @@
     }
 
     .circle:nth-child(64) {
-      background: #9750c4;
-      box-shadow: 0 0 9px 4px #9750c4;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 9px 4px rgba(255, 255, 255, 0.5);
       top: 23%;
       left: 21%;
       width: 30px;
@@ -1813,8 +1812,8 @@
     }
 
     .circle:nth-child(56) {
-      background: #c545a5;
-      box-shadow: 0 0 2px 2px #c545a5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
       top: 69%;
       left: 12%;
       width: 62px;
@@ -1825,8 +1824,8 @@
     }
 
     .circle:nth-child(30) {
-      background: #c944ab;
-      box-shadow: 0 0 4px 9px #c944ab;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 4px 9px rgba(255, 255, 255, 0.5);
       top: 42%;
       left: 46%;
       width: 79px;
@@ -1837,8 +1836,8 @@
     }
 
     .circle:nth-child(149) {
-      background: #da7cd5;
-      box-shadow: 0 0 10px 10px #da7cd5;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
       top: 16%;
       left: 26%;
       width: 43px;
@@ -1849,8 +1848,8 @@
     }
 
     .circle:nth-child(150) {
-      background: #9e3c9c;
-      box-shadow: 0 0 7px 2px #9e3c9c;
+      background: hsla(0, 0%, 100%, .95);
+      box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.5);
       top: 12%;
       left: 84%;
       width: 49px;
