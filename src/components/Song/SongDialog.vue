@@ -27,7 +27,6 @@
           stripe
           height="500"
           highlight-current-row
-          @current-change="showQrDialog"
           style="width: 100%">
           <el-table-column width="40" class="column-play" class-name="column-play"><span class="iconfont icon-play"/>
           </el-table-column>
@@ -35,7 +34,10 @@
           <el-table-column label="歌曲名">
             <template slot-scope="scope">{{scope.row.album.title}}</template>
           </el-table-column>
-          <el-table-column label="播放时长" width="150">4:12</el-table-column>
+          <el-table-column label="播放时长" width="150" class-name="play-time-column">
+            <span class="play-time">4:12</span>
+            <el-button class="btn-buy" type="success" size="small" @click="showQrDialog">购买</el-button>
+          </el-table-column>
         </el-table>
       </div>
     </div>
@@ -150,6 +152,30 @@
     .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
     .el-table__body tr.current-row > td {
       background-color: #dcdcdc;
+    }
+
+
+    .el-table__row {
+      .play-time-column {
+        .play-time {
+          display: block;
+        }
+
+        .btn-buy {
+          display: none;
+        }
+      }
+
+      &.current-row {
+        .play-time-column {
+          .play-time {
+            display: none;
+          }
+          .btn-buy {
+            display: block;
+          }
+        }
+      }
     }
   }
 </style>
