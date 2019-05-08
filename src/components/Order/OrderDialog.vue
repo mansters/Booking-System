@@ -1,5 +1,6 @@
 <template>
   <el-dialog title="点餐"
+             custom-class="colorful-dialog"
              :visible.sync="dialogVisible"
              width="1000px"
              append-to-body
@@ -17,10 +18,6 @@
           购买
         </div>
       </OrderCard>
-    </div>
-    <div slot="footer" class="dialog-footer">
-      <el-button @click="dialogVisible = false">取 消</el-button>
-      <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
     </div>
   </el-dialog>
 </template>
@@ -53,7 +50,7 @@
         }
       }
     },
-    methods: {
+    methods   : {
       showQrCode() {
         this.$emit('show-qr-code')
       }
@@ -72,7 +69,7 @@
 
     .order-buy {
       line-height: 40px;
-      background-color: #409EFF;
+      background: linear-gradient(90deg, rgba(252, 156, 59, 1) 0%, rgba(255, 201, 93, 1) 100%);
       color: #fff;
       text-align: center;
       font-size: 20px;

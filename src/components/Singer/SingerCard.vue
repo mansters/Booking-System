@@ -9,7 +9,9 @@
         <div class="card__category">{{type}}</div>
         <h2 class="card__title">{{title}}</h2>
         <div class="card__subtitle">{{subtitle}}</div>
-        <p class="card__description"><slot></slot></p>
+        <p class="card__description">
+          <slot></slot>
+        </p>
       </div>
 
       <footer class="card__footer">
@@ -21,7 +23,7 @@
 
 <script>
   export default {
-    name: "OrderCard",
+    name : "OrderCard",
     props: ['img', 'type', 'title', 'subtitle']
   }
 </script>
@@ -78,6 +80,7 @@
       background-color: #000;
       -webkit-transition: height 0.5s;
       transition: height 0.5s;
+      border-bottom: 1px solid #ececec;
     }
 
     .card__thumb img {

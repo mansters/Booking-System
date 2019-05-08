@@ -1,5 +1,6 @@
 <template>
   <el-dialog title="女团"
+             custom-class="colorful-dialog"
              :visible.sync="dialogVisible"
              width="1000px"
              append-to-body
@@ -78,7 +79,7 @@
 
       .btn-vote {
         padding-right: 10px;
-        background-color: #409EFF;
+        background: linear-gradient(90deg, rgba(252, 156, 59, 1) 0%, rgb(226, 179, 82) 100%);
         line-height: 40px;
         color: #fff;
       }

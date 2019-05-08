@@ -15,6 +15,21 @@ html, body, .el-container {
   padding: 0;
 }
 
+.colorful-dialog {
+
+  .el-dialog__title {
+    font-size: 24px;
+    color: rgba(68, 163, 252, 1);
+    border-bottom: 3px solid rgb(68, 163, 252);
+    display: block;
+    padding-bottom: 15px;
+  }
+
+  .el-dialog__body {
+    padding: 20px 20px 30px;
+  }
+}
+
 .theme-dark {
   $dark-background: #545c64;
   $dark-background-hover: rgb(67, 74, 80);
