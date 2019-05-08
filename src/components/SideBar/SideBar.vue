@@ -69,11 +69,11 @@
             break;
           }
           case '寿命': {
-            this.singerDialogVisible = true;
+            this.lifeTimeDialogVisible = true;
             break;
           }
           case '女团': {
-            this.lifeTimeDialogVisible = true;
+            this.singerDialogVisible = true;
             break;
           }
         }
