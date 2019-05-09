@@ -33,21 +33,25 @@
     </el-form-item>
 
     <el-form-item>
-      <el-button type="primary">查询</el-button>
+      <el-button type="primary" @click="countingDialogVisible = true">查询</el-button>
     </el-form-item>
+
+    <CountingDialog :visible.sync="countingDialogVisible"/>
   </el-form>
 </template>
 
 <script>
-  import ChineseCities from './ChineseCities';
+  import ChineseCities  from './ChineseCities';
+  import CountingDialog from './CountingDialog'
 
 
   export default {
     name: "SearchTicketForm",
     data() {
       return {
-        chineseCities : ChineseCities,
-        formModel     : {
+        countingDialogVisible: false,
+        chineseCities: ChineseCities,
+        formModel    : {
           departure: '',
           arrival  : '',
           date     : ''
@@ -80,6 +84,9 @@
           ]
         },
       }
+    },
+    components: {
+      CountingDialog
     }
   }
 </script>

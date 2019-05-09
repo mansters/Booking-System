@@ -8,6 +8,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/style/icon/iconfont.css'
+import '@/style/font/lcdfont.css'
 
 Vue.config.productionTip = false
 
