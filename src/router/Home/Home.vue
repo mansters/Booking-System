@@ -2,10 +2,14 @@
   <div class="home-page">
     <Banner/>
     <AnimationBackground>
+      <div slot="travel">
+        <Travel></Travel>
+      </div>
       <div class="content-container home-hotels-container">
         <FlexCarousel :list="hotels"/>
       </div>
       <div class="content-container untrustworthy-persons">
+        <!-- 失信人员名单 -->
         <UntrustworthyPersons/>
       </div>
     </AnimationBackground>
@@ -17,9 +21,8 @@
   import FlexCarousel         from '@/components/FlexCarousel';
   import UntrustworthyPersons from './UntrustworthyPersons'
   import AnimationBackground  from '@/components/AnimationBackground/AnimationBackground';
-  import HotelTypes           from './HotelTypes';
-
-
+  import HotelTypes           from './HotelTypes'
+  import Travel               from '@/components/Travel/Travel'
   export default {
     name      : "Home",
     data() {
@@ -31,7 +34,8 @@
       Banner,
       FlexCarousel,
       UntrustworthyPersons,
-      AnimationBackground
+      AnimationBackground,
+      Travel
     }
   }
 </script>

@@ -1,0 +1,8 @@
+export const OPEN_ONE_WAY='OPEN_ONE_WAY'
+export const CLOSE_ONE_WAY='CLOSE_ONE_WAY'
+export const OPEN_TWO_WAY ='OPEN_TWO_WAY'
+export const  CLOSE_TWO_WAY='CLOSE_TWO_WAY'
+export const OPEN_REFUND='OPEN_REFUND'
+export const  CLOSE_REFUND='CLOSE_REFUND'
+export const OPEN_SEATS='OPEN_SEATS'
+export const CLOSE_SEATS='CLOSE_SEATS'

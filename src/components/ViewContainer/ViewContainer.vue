@@ -10,7 +10,7 @@
         <li class="nav-menu-icon">
           <img :src="imgLogo" alt="">
         </li>
-        <el-menu-item index="index">首页</el-menu-item>
+        <el-menu-item index="1"><router-link to="/">首页</router-link></el-menu-item>
         <el-submenu index="2">
           <template slot="title">车票</template>
           <el-submenu index="2-1">
@@ -20,9 +20,10 @@
           </el-submenu>
           <el-menu-item index="2-2">退票</el-menu-item>
           <el-menu-item index="2-3">改签</el-menu-item>
-          <el-menu-item index="2-3">信息查询</el-menu-item>
+          <el-menu-item index="2-4">信息查询</el-menu-item>
         </el-submenu>
-
+        <el-menu-item index="3">更新日志</el-menu-item>
+        <el-menu-item index="4"><router-link to="/TravellersAre">旅客须知</router-link></el-menu-item>
         <UserDropdown v-if="loginUser" class="nav-menu-right"/>
         <el-menu-item v-else
                       index="login"
@@ -44,11 +45,16 @@
       <LoginFormDialog :visible.sync="loginDialogVisible" @open-sign-up-dialog="signUpDialogVisible = true"/>
       <SignUpFormDialog :visible.sync="signUpDialogVisible"/>
     </template>
+    <OneWay  />
+    <BackAndForth/>
+    <ChooseTheSeat/>
+    <Endorse/>
+    <Refund/>
   </el-container>
 </template>
 
 <script>
-  import {mapMutations, mapState}                from 'vuex'
+  import {mapMutations,mapActions, mapState}                from 'vuex'
   import UserTypes, {namespace as UserNamespace} from '@/store/User/types';
   import imgLogo                                 from '@/assets/logo.png';
 
@@ -56,12 +62,17 @@
   import SignUpFormDialog from './SignUpFormDialog'
   import UserDropdown     from './UserDropdown';
   import SideBar          from '@/components/SideBar/SideBar'
-
+  import OneWay           from '@/components/Ticket/OneWay'
+  import BackAndForth     from '@/components/Ticket/BackAndForth'
+  import ChooseTheSeat    from '@/components/Ticket/ChooseTheSeat'
+  import Endorse          from '@/components/Ticket/Endorse'
+  import Refund           from '@/components/Ticket/Refund'
 
   export default {
     name      : "ViewContainer",
     data() {
       return {
+        oneWayShow:false,
         loginDialogVisible : false,
         signUpDialogVisible: false,
         imgLogo,
@@ -70,24 +81,43 @@
     },
     computed  : {
       ...mapState(UserNamespace, [
-        'loginUser'
-      ])
+        'loginUser',
+      ]),
     },
     methods   : {
+      ...mapActions('ticket',[ //获取点击显示的方法通过vuex
+        'openOneWay',
+        'openTwoWay',
+        'openRefund',
+      ]),
       onSelectMenu(index) {
         switch (index) {
-          case 'login': {
+          case 'login':
             this.loginDialogVisible = true;
             break;
-          }
+          case '2-1-1':
+            this.openOneWay()
+            break
+          case '2-1-2':
+            this.openTwoWay()
+            break
+          case '2-2':
+            this.openRefund()
+            break
         }
-      }
+      },
+
     },
     components: {
       LoginFormDialog,
       SignUpFormDialog,
       UserDropdown,
-      SideBar
+      SideBar,
+      OneWay,
+      BackAndForth,
+      ChooseTheSeat,
+      Endorse,
+      Refund
     }
   }
 </script>
@@ -99,7 +129,9 @@
     .el-menu.el-menu--horizontal {
       border: none;
     }
-
+    a{
+      text-decoration: none;
+    }
     .nav-menu-icon {
       width: 150px;
       text-align: center;

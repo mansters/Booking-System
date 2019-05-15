@@ -6,7 +6,8 @@ import LocalStorage from '@/utils/LocalStorage';
 import ViewContainer from '@/components/ViewContainer/ViewContainer';
 
 import Home from '@/router/Home/Home';
-
+import TravellersAre from '@/components/TravellersAre/TravellersAre'
+import ToEndorse from  '@/components/Ticket/ToEndorse'
 Vue.use(Router)
 
 const router = new Router({
@@ -17,6 +18,8 @@ const router = new Router({
       component: ViewContainer,
       children: [
         { path: '', name: 'Home', component: Home },
+        {path:'/TravellersAre',name:'TravellersAre',component:TravellersAre},
+        {path:'/ToEndorse',name:'ToEndorse',component:ToEndorse}
       ]
     }
   ]
@@ -39,9 +42,9 @@ router.beforeEach((to, from, next) => {
       store.state.User.loginUser = LocalStorageUser.loginUser;
     }
 
-    if (Object.keys(LocalStorageUser.userSet).length !== 0) {
-      store.state.User.userSet = LocalStorageUser.userSet;
-    }
+    // if (Object.keys(LocalStorageUser.userSet).length !== 0) {
+    //   store.state.User.userSet = LocalStorageUser.userSet;
+    // }
   }
 
   next();

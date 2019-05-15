@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import User from './User';
-
+import ticket from './Ticket/ticket'
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
   modules: {
-    User
+    User,
+    ticket
   }
 });
 
-export default store;
+

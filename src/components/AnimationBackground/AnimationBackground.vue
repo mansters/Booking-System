@@ -1,6 +1,7 @@
 <template>
   <div class="animation-background">
     <div class="circles">
+      <slot name="travel"></slot>
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
