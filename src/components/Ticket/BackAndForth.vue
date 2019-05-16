@@ -4,63 +4,70 @@
 <template>
   <div id="BackAndForth">
     <el-dialog
-      title="往返车票"
+      custom-class="backAndForth"
+      title=""
       :visible.sncy="backAndForth"
-      width="400px"
+      width="580px"
       append-to-body
       center
       :before-close="twoWayClose"
     >
-      <el-form :model="form">
-        <el-form-item label="出发城市" >
-          <el-select v-model="form.departure" placeholder="请选择出发城市">
-            <el-option
-              v-for="city in chineseCities"
-              :key="city.name"
-              :label="city.name"
-              :value="city.pinyin">
-            </el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item label="到达城市" >
-          <el-select v-model="form.arrival" placeholder="请选择到达城市">
-            <el-option
-              v-for="city in chineseCities"
-              :key="city.name"
-              :label="city.name"
-              :value="city.pinyin">
-            </el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item label="出发日期">
-          <el-date-picker
-            v-model="form.data"
-            align="right"
-            type="date"
-            placeholder="选择日期"
-            :picker-options="pickerOptions1"
-          >
-          </el-date-picker>
-        </el-form-item>
-        <el-form-item label="返回日期">
-          <el-date-picker
-            v-model="form.data"
-            align="right"
-            type="date"
-            placeholder="选择日期"
-            :picker-options="pickerOptions1"
-          >
-          </el-date-picker>
-        </el-form-item>
-      </el-form>
+      <div class="dialogTitle">
+        往返车票
+      </div>
+      <div class="dialogForm">
+        <el-form :model="form" class="twoWayForm">
+          <el-form-item label="出发城市" >
+            <el-select v-model="form.departure" placeholder="请选择出发城市">
+              <el-option
+                v-for="city in chineseCities"
+                :key="city.name"
+                :label="city.name"
+                :value="city.pinyin">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="到达城市" >
+            <el-select v-model="form.arrival" placeholder="请选择到达城市">
+              <el-option
+                v-for="city in chineseCities"
+                :key="city.name"
+                :label="city.name"
+                :value="city.pinyin">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="出发日期">
+            <el-date-picker
+              v-model="form.data"
+              align="right"
+              type="date"
+              placeholder="选择日期"
+              :picker-options="pickerOptions1"
+            >
+            </el-date-picker>
+          </el-form-item>
+          <el-form-item label="返回日期">
+            <el-date-picker
+              v-model="form.data"
+              align="right"
+              type="date"
+              placeholder="选择日期"
+              :picker-options="pickerOptions1"
+            >
+            </el-date-picker>
+          </el-form-item>
+        </el-form>
+      </div>
+
       <div class="changeCity">
         <div class="changeIcon" @click="changeCity">
           <i class="el-icon-sort"></i>
         </div>
       </div>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="twoWayClose">取 消</el-button>
-        <el-button type="primary" @click="openit">确 定</el-button>
+        <!--<el-button @click="twoWayClose">取 消</el-button>-->
+        <el-button class="query"  @click="openit">查 询</el-button>
       </div>
     </el-dialog>
   </div>
@@ -142,11 +149,47 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
+  .backAndForth{
+    background:linear-gradient(to top right, #91D5EB 0%, #96c9F0 25%,#AAD3EC 60%, #92C9D2 100%);
+    .el-dialog__body,.el-dialog__footer {
+      padding: 0;
+    }
+    .dialogTitle{
+      width: 100%;
+      height: 180px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 180px;
+      color:#ffffff;
+      letter-spacing: 3px;
+    }
+    .dialogForm{
+      width: 100%;
+      height: 280px;
+      background-color:#DADADA;
+      .twoWayForm{
+        padding-top: 20px;
+        width: 50%;
+        margin: auto;
+      }
+    }
+    .dialog-footer{
+      background-color: #DADADA;
+      padding-bottom: 20px;
+      .query{
+        width: 50%;
+        height: 50px;
+        background:linear-gradient(to right,#FC9C3B ,#FFC95D);
+        color:#ffffff;
+        font-size: 16px;
+      }
+    }
+  }
   .changeCity{
     position: absolute;
-    top: 90px;
-    right: 60px;
+    top: 240px;
+    right: 124px;
     width: 20px;
     height: 70px;
     border: 1px solid #969896;

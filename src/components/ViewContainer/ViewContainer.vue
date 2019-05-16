@@ -50,6 +50,8 @@
     <ChooseTheSeat/>
     <Endorse/>
     <Refund/>
+    <Exclusive/>
+    <InformationQuery/>
   </el-container>
 </template>
 
@@ -67,6 +69,8 @@
   import ChooseTheSeat    from '@/components/Ticket/ChooseTheSeat'
   import Endorse          from '@/components/Ticket/Endorse'
   import Refund           from '@/components/Ticket/Refund'
+  import Exclusive        from '@/components/Ticket/Exclusive'
+  import InformationQuery        from '@/components/Ticket/InformationQuery'
 
   export default {
     name      : "ViewContainer",
@@ -89,6 +93,8 @@
         'openOneWay',
         'openTwoWay',
         'openRefund',
+        'openEdorse',
+        'openQuery'
       ]),
       onSelectMenu(index) {
         switch (index) {
@@ -104,6 +110,13 @@
           case '2-2':
             this.openRefund()
             break
+          case '2-3':
+            this.openEdorse()
+            break
+          case '2-4':
+            this.openQuery()
+          default :
+            break
         }
       },
 
@@ -117,7 +130,9 @@
       BackAndForth,
       ChooseTheSeat,
       Endorse,
-      Refund
+      Refund,
+      Exclusive,
+      InformationQuery
     }
   }
 </script>
