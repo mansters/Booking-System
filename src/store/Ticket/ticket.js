@@ -12,7 +12,11 @@ import {
   OPEN_EDORSE,
   CLOSE_EDORSE,
   OPEN_QUERY,
-  CLOSE_QUERY
+  CLOSE_QUERY,
+  OPEN_TO_ENDORSE,
+  CLOSE_TO_ENDORSE,
+  OPEN_QR,
+  CLOSE_QR
 } from './type'
 
 const state = {
@@ -22,7 +26,9 @@ const state = {
   seats:false,
   exclusiveShow:false,
   edorseShow:false,
-  showQuery:false
+  showQuery:false,
+  toEndorse:false,
+  qrShow:false
 }
 const actions ={
     //打开单程
@@ -33,6 +39,7 @@ const actions ={
   closeOneWay:({commit})=>{
   commit(CLOSE_ONE_WAY)
   },
+  //打开往返
   openTwoWay:({commit})=>{
     commit(OPEN_TWO_WAY)
   },
@@ -68,6 +75,18 @@ const actions ={
   },
   closeQuery:({commit})=>{
       commit(CLOSE_QUERY)
+  },
+  openToEndorse:({commit})=>{
+      commit(OPEN_TO_ENDORSE)
+  },
+  closeToEndorse:({commit})=>{
+      commit(CLOSE_TO_ENDORSE)
+  },
+  openQr:({commit})=>{
+      commit(OPEN_QR)
+  },
+  closeQr:({commit})=>{
+      commit(CLOSE_QR)
   }
 }
 const mutations = {
@@ -112,6 +131,18 @@ const mutations = {
   },
   [CLOSE_QUERY](state){
     state.showQuery = false
+  },
+  [OPEN_TO_ENDORSE](state){
+    state.toEndorse = true
+  },
+  [CLOSE_TO_ENDORSE](state){
+    state.toEndorse =false
+  },
+  [OPEN_QR](state){
+    state.qrShow = true
+  },
+  [CLOSE_QR](state){
+    state.qrShow = false
   }
 }
 

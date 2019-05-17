@@ -13,6 +13,7 @@
         <UntrustworthyPersons/>
       </div>
     </AnimationBackground>
+    <Cover />
   </div>
 </template>
 
@@ -23,11 +24,12 @@
   import AnimationBackground  from '@/components/AnimationBackground/AnimationBackground';
   import HotelTypes           from './HotelTypes'
   import Travel               from '@/components/Travel/Travel'
+  import Cover                from '@/components/Cover/Cover'
   export default {
     name      : "Home",
     data() {
       return {
-        hotels: HotelTypes
+        hotels: HotelTypes,
       }
     },
     components: {
@@ -35,7 +37,8 @@
       FlexCarousel,
       UntrustworthyPersons,
       AnimationBackground,
-      Travel
+      Travel,
+      Cover
     }
   }
 </script>

@@ -7,7 +7,6 @@ import ViewContainer from '@/components/ViewContainer/ViewContainer';
 
 import Home from '@/router/Home/Home';
 import TravellersAre from '@/components/TravellersAre/TravellersAre'
-import ToEndorse from  '@/components/Ticket/ToEndorse'
 Vue.use(Router)
 
 const router = new Router({
@@ -19,7 +18,7 @@ const router = new Router({
       children: [
         { path: '', name: 'Home', component: Home },
         {path:'/TravellersAre',name:'TravellersAre',component:TravellersAre},
-        {path:'/ToEndorse',name:'ToEndorse',component:ToEndorse}
+        // {path:'/ToEndorse',name:'ToEndorse',component:ToEndorse}
       ]
     }
   ]

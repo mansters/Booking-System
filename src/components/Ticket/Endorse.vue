@@ -10,7 +10,7 @@
       :before-close="closeEndorse"
     >
       <div class="dialogTitle">
-        <span class="purposeTitle">退票</span>
+        <span class="purposeTitle">改&nbsp;&nbsp;签</span>
       </div>
       <div class="cardBox">
         <el-card class="cardNow">
@@ -57,15 +57,16 @@
     },
     methods:{
       ...mapActions('ticket',[
-        'closeEdorse'
+        'closeEdorse',
+        'openToEndorse'
       ]),
       closeEndorse(){
         this.closeEdorse()
       },
       ToEndorse(){
+        this.openToEndorse()
         this.closeEdorse()
-        this.$router.push({path:'/ToEndorse'})
-        this.endorseShow = false
+        // this.$router.push({path:'/ToEndorse'})
       }
     }
   }

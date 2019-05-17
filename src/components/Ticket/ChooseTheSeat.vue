@@ -34,7 +34,7 @@
               <div class=trainModel>
                 <div class="trainHead">
                 </div>
-                <div v-for="index in 16" class="trainBody defaultBody" >
+                <div v-for="index in 16" class="trainBody defaultBody" @click="choseCarriage($event)">
                   {{index}}
                 </div>
               </div>
@@ -56,12 +56,12 @@
                   <div v-for="index in 16" class="choseSeat">
                     <div class="setNum">{{index>9? index:'0'+index}}</div>
                     <div class="seatWord">窗</div>
-                    <div class="seat seatDefault">A</div>
-                    <div class="seat seatDefault">B</div>
-                    <div class="seat seatDefault">C</div>
+                    <div class="seat seatDefault" @click="changeSeats($event)">A</div>
+                    <div class="seat seatDefault" @click="changeSeats($event)">B</div>
+                    <div class="seat seatDefault" @click="changeSeats($event)">C</div>
                     <div class="seatWord">过道</div>
-                    <div class="seat seatDefault">D</div>
-                    <div class="seat seatDefault">E</div>
+                    <div class="seat seatDefault" @click="changeSeats($event)">D</div>
+                    <div class="seat seatDefault" @click="changeSeats($event)">E</div>
                     <div class="seatWord">窗</div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@
           <span class="payNumber">需支付：￥  <label class="payMoney">{{payMoney}}</label></span>
         </div>
         <div class="buy">
-          <el-button class="buyTicket">购 票</el-button>
+          <el-button class="buyTicket" @click="showCard">购 票</el-button>
         </div>
       </div>
     </el-dialog>
@@ -86,41 +86,22 @@
 
 <script>
   import  {mapState,mapActions} from 'vuex'
-  let trains = document.getElementsByClassName('trainBody')
-  let seats = document.getElementsByClassName('seat')
-  let trainNow = []
-  let seatsNow = []
-  setTimeout( function () {
-    trainNow = [...trains]
-    trainNow.forEach( item=>{
-        item.onclick =function ( e) {
-         // console.log(e)
-            item.classList.remove('defaultBody')
-            item.classList.add('checkedBody')
-        }
-    })
-    seatsNow = [...seats]
-    seatsNow.forEach( res =>{
-      res.onclick = function (e) {
-        res.classList.remove('seatDefault')
-        res.classList.add('seatChecked')
-      }
-    })
-  })
-
   export default {
     name: 'ChooseTheSeat',
     computed:{
       ...mapState('ticket',{
         setShow: state=>state.seats
-      })
+      }),
     },
     data(){
       return{
         payMoney: 99,
+        trains:[],
+        seats:[],
         testAdd:[ //测试已选车座
           {
-            carriageNumber:'1', // 车厢号
+            carriageNumber:'1', // 已选车厢号
+            fullNumber:'2', // 已满车厢号
             activedSeats:{ //已选座位
               activeNumber: '1', //已选的牌号
               acctivedWord:'A,B,D'//已选的座位
@@ -138,8 +119,26 @@
     },
     methods:{
       ...mapActions('ticket',[
-        'closeSeats'
+        'closeSeats',
+        'openQr'
       ]),
+      choseCarriage(data){
+        let _this =this
+        console.log(data.target.classList)
+          data.target.classList.remove('defaultBody')
+          data.target.classList.add('checkedBody')
+
+      },
+      changeSeats(data){
+        let _this = this
+        data.target.classList.remove('seatDefault')
+        data.target.classList.add('seatChecked')
+
+      },
+      showCard(){
+        console.log('测试测试')
+        this.openQr()
+      },
       checedNow( e){
         console.log(e)
       },
@@ -172,9 +171,12 @@
     },
     mounted(){
       let _this = this
-      setTimeout( function () {
-        _this.showChose(_this.testAdd)
-      })
+      // let trains = document.getElementsByClassName('trainBody')
+      // let seats = document.getElementsByClassName('seat')
+      // console.log(trains,seats)
+      _this.trains = document.getElementsByClassName('trainBody')
+      _this.seats = document.getElementsByClassName('seat')
+      console.log( _this.trains,_this.seats)
     }
   }
 </script>

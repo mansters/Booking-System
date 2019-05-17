@@ -45,13 +45,7 @@
       <LoginFormDialog :visible.sync="loginDialogVisible" @open-sign-up-dialog="signUpDialogVisible = true"/>
       <SignUpFormDialog :visible.sync="signUpDialogVisible"/>
     </template>
-    <OneWay  />
-    <BackAndForth/>
-    <ChooseTheSeat/>
-    <Endorse/>
-    <Refund/>
-    <Exclusive/>
-    <InformationQuery/>
+   <MainBox/>
   </el-container>
 </template>
 
@@ -64,13 +58,7 @@
   import SignUpFormDialog from './SignUpFormDialog'
   import UserDropdown     from './UserDropdown';
   import SideBar          from '@/components/SideBar/SideBar'
-  import OneWay           from '@/components/Ticket/OneWay'
-  import BackAndForth     from '@/components/Ticket/BackAndForth'
-  import ChooseTheSeat    from '@/components/Ticket/ChooseTheSeat'
-  import Endorse          from '@/components/Ticket/Endorse'
-  import Refund           from '@/components/Ticket/Refund'
-  import Exclusive        from '@/components/Ticket/Exclusive'
-  import InformationQuery        from '@/components/Ticket/InformationQuery'
+  import MainBox           from '@/components/Ticket/index'
 
   export default {
     name      : "ViewContainer",
@@ -126,13 +114,7 @@
       SignUpFormDialog,
       UserDropdown,
       SideBar,
-      OneWay,
-      BackAndForth,
-      ChooseTheSeat,
-      Endorse,
-      Refund,
-      Exclusive,
-      InformationQuery
+      MainBox
     }
   }
 </script>
