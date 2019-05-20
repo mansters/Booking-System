@@ -44,7 +44,9 @@
     name: 'theQuery',
     data(){
       return{
-        timeData:[]
+        timeData:[],
+        origin:'',
+        destination:''
       }
     },
     methods:{
