@@ -125,14 +125,29 @@
       choseCarriage(data){
         let _this =this
         console.log(data.target.classList)
+        let classNow = [...data.target.classList]
+        console.log(classNow.indexOf('checkedBody'))
+        if (classNow.indexOf('checkedBody') ===-1){
           data.target.classList.remove('defaultBody')
           data.target.classList.add('checkedBody')
+        } else {
+          data.target.classList.remove('checkedBody')
+          data.target.classList.add('defaultBody')
+        }
+
 
       },
       changeSeats(data){
         let _this = this
-        data.target.classList.remove('seatDefault')
-        data.target.classList.add('seatChecked')
+        let classNow =[...data.target.classList]
+        if(classNow.indexOf('seatChecked') === -1){
+          data.target.classList.remove('seatDefault')
+          data.target.classList.add('seatChecked')
+        }else {
+          data.target.classList.remove('seatChecked')
+          data.target.classList.add('seatDefault')
+        }
+
 
       },
       showCard(){

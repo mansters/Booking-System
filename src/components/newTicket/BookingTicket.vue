@@ -48,6 +48,15 @@
 </script>
 
 <style scoped lang="scss">
+#BookingTicket /deep/ .el-tabs__item{
+  font-size: 20px;
+}
+#BookingTicket /deep/ .el-tabs__item:hover{
+  color: #45A4FD;
+}
+#BookingTicket /deep/ .el-tabs__item.is-active{
+  color: #45A4FD;
+}
 #BookingTicket{
   width:60%;
   margin:auto;
