@@ -1,6 +1,6 @@
 <template>
     <div id="Exclusive">
-      <BreadCrumbs/>
+      <BreadCrumbs :bread="breadCrumbs"/>
       <div class="destination">
           <div class="destinationTitle">
             <span class="destinationTitle_left">专属目的地:&nbsp;&nbsp;</span>
@@ -42,6 +42,7 @@
 <script>
   import ChineseCities  from '@/router/Home/ChineseCities';
   import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
+  import {mapState,mapActions} from 'vuex'
   export default {
     name: 'Exclusive',
     components:{
@@ -50,17 +51,23 @@
     data(){
       return{
         aroundCity:ChineseCities[Math.floor(Math.random()*949)].name,
-        cityData:[]
+        cityData:[],
+        breadCrumbs:[
+          {
+            name:'专属目的地',
+            path:'/Exclusive'
+          }
+        ]
       }
     },
     methods:{
+      ...mapActions('ticket',[
+        'openSeats'
+      ]),
       buyTicket(data){
-
-      }
-    },
-    methods:{
+          this.openSeats()
+      },
       tableCellClassName({row, column, rowIndex, columnIndex}){
-        console.log(columnIndex )
         if (columnIndex  === 0) {
           return 'warning-row';
         }

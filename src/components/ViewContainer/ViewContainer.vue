@@ -90,19 +90,24 @@
             this.loginDialogVisible = true;
             break;
           case '2-1-1':
-            this.openOneWay()
+            // this.openOneWay()
+            this.$router.push({path:'/BookingTicket'})
             break
           case '2-1-2':
-            this.openTwoWay()
+            // this.openTwoWay()
+            this.$router.push({path:'/BookingTicket'})
             break
           case '2-2':
-            this.openRefund()
+            // this.openRefund()
+            this.$router.push({path:'/BookingTicket'})
             break
           case '2-3':
-            this.openEdorse()
+            // this.openEdorse()
+            this.$router.push({path:'/BookingTicket'})
             break
           case '2-4':
-            this.openQuery()
+            // this.openQuery()
+            this.$router.push({path:'/BookingTicket'})
           default :
             break
         }

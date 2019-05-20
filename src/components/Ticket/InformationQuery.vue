@@ -42,7 +42,6 @@
                   align="center"
                   >
                 </el-table-column>
-
               </el-table>
             </div>
           </div>

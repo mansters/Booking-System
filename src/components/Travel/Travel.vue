@@ -19,7 +19,8 @@
         'openExclusive'
       ]),
       booking(){
-        this.openExclusive()
+        // this.openExclusive()
+        this.$router.push({path:'/Exclusive'})
       }
     }
   }
