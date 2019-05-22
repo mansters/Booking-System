@@ -30,7 +30,7 @@
 <script>
   import {mapActions, mapGetters}  from 'vuex';
   import UserTypes, {namespace as UserNamespace} from '@/store/User/types';
-
+  import User from './user'
 
   export default {
     name    : "LoginFormDialog",
@@ -44,7 +44,7 @@
       const checkUsername = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请输入用户名'));
-        } else if (!this.isSignUpUser(value)) {
+        } else if (this.isUser(value)) { //!this.isSignUpUser(value)
           callback(new Error('该用户不存在'));
         } else {
           callback();
@@ -54,7 +54,7 @@
       const checkPassword = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请输入密码'));
-        } else if (!this.passwordCheck(this.loginFormModel)) {
+        } else if (this.isPassword(value)) { //!this.passwordCheck(this.loginFormModel)
           callback(new Error('用户名与密码不匹配'));
         } else {
           callback();
@@ -97,7 +97,30 @@
       ...mapActions(UserNamespace, {
         login: UserTypes.ACTION.LOGIN
       }),
-
+      // 验证用户是否存在
+      isUser(data){
+        console.log(data)
+        User.forEach(item =>{
+          console.log(item.username)
+          if (item.username === data) {
+            return false
+          }else {
+            return true
+          }
+        })
+      },
+      //验证密码
+      isPassword(data){
+        console.log(data)
+        User.forEach(item =>{
+          console.log(item.password)
+          if (item.password === data) {
+            return false
+          }else {
+            return true
+          }
+        })
+      },
       openSignUpDialog() {
         this.dialogVisible = false;
         this.$emit('open-sign-up-dialog');
@@ -108,12 +131,30 @@
           if (valid) {
             this.login(this.loginFormModel);
             this.dialogVisible = false;
+            User.forEach( item =>{
+             if (item.username === this.loginFormModel.username) {
+               this.routerTO(item.permissions)
+             }
+            })
           } else {
             return false;
           }
         });
       },
-
+      // 跳转
+      routerTO(value){
+        switch (value) {
+          case '0':
+            this.$router.push({path:'Administrator'})
+            break
+          case  '1':
+            this.$router.push({path:'Administrator'})
+            break
+          case '2':
+            this.$router.push({path:''})
+            break
+        }
+      },
       onDialogClose() {
         this.loginFormModel = {
           username: '',

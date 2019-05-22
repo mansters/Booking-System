@@ -1,4 +1,6 @@
 export default {
   loginUser: null,
-  userSet: {}
+  userSet: {
+
+  }
 }
