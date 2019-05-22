@@ -98,23 +98,24 @@
         payMoney: 99,
         trains:[],
         seats:[],
-        testAdd:[ //测试已选车座
-          {
+        testAdd:{ //测试已选车座
             carriageNumber:'1', // 已选车厢号
             fullNumber:'2', // 已满车厢号
-            activedSeats:{ //已选座位
-              activeNumber: '1', //已选的牌号
-              acctivedWord:'A,B,D'//已选的座位
-            }
-          },
-          {
-            carriageNumber:'0', // 车厢号
-            activedSeats:{ //已选座位
-              activeNumber: '2', //已选的牌号
-              acctivedWord:'A,D,E'//已选的座位
-            }
-          }
-        ]
+            activedSeats:[ //已选座位
+              {
+                activeNumber: '1', //已选的牌号
+                acctivedWord: 'A,B,D'//已选的座位
+              },
+              {
+                activeNumber: '2', //已选的牌号
+                acctivedWord: 'A,C,D'//已选的座位
+              },
+              {
+                activeNumber: '6', //已选的牌号
+                acctivedWord: 'A,D,E'//已选的座位
+              }
+            ]
+        }
       }
     },
     methods:{
@@ -162,13 +163,13 @@
       },
       showChose(data){
         let _this = this
-        if( Array.isArray(data)){
-          data.forEach( item => {
-            _this.columnActived(item.activedSeats.activeNumber,item.activedSeats.acctivedWord)
-          })
-        }
+        // if( Array.isArray(data)){
+        //   data.forEach( item => {
+        //     _this.columnActived(item.activedSeats.activeNumber,item.activedSeats.acctivedWord)
+        //   })
+        // }
       },
-      columnActived(data,activedWord){
+      columnActived(){
         // let cc = []
         // seats.forEach( item =>{
         //   cc = [...item.children]
@@ -186,12 +187,9 @@
     },
     mounted(){
       let _this = this
-      // let trains = document.getElementsByClassName('trainBody')
-      // let seats = document.getElementsByClassName('seat')
-      // console.log(trains,seats)
       _this.trains = document.getElementsByClassName('trainBody')
       _this.seats = document.getElementsByClassName('seat')
-      console.log( _this.trains,_this.seats)
+      _this.showChose(_this.testAdd)
     }
   }
 </script>

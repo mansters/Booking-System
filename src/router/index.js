@@ -10,6 +10,12 @@ import TravellersAre from '@/components/TravellersAre/TravellersAre'
 import Exclusive from '@/components/newTicket/Exclusive'
 import BookingTicket from '@/components/newTicket/BookingTicket'
 import RobTickets from '@/components/RobTickets/RobTickets'
+import Administrator from '@/components/Administrator/Administrator'
+import Permissions from  '@/components/Administrator/Permissions/Permissions'
+import Add        from '@/components/Administrator/Operation/Add'
+import Delete      from '@/components/Administrator/Operation/Delete'
+import Edit        from '@/components/Administrator/Operation/Edit'
+import Release    from '@/components/Administrator/Operation/Release'
 Vue.use(Router)
 
 const router = new Router({
@@ -24,6 +30,18 @@ const router = new Router({
         {path:'/Exclusive',name:'Exclusive',component:Exclusive},
         {path:'/BookingTicket',name:'BookingTicket',component:BookingTicket},
         {path:'/RobTickets',name:'RobTickets',component:RobTickets}
+      ]
+    },
+    {
+      path:'/Administrator',
+      name:'Administrator',
+      component:Administrator,
+      children:[
+        {path:'',name:'Permissions',component:Permissions},
+        {path:'/Add',name:'Add',component:Add},
+        {path:'/Delete',name:'Delete',component:Delete},
+        {path:'/Edit',name:'Edit',component:Edit},
+        {path:'/Release',name:'Release',component:Release}
       ]
     }
   ]

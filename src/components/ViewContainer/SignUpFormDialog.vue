@@ -6,7 +6,6 @@
     @close="onDialogClose"
     append-to-body
   >
-
     <el-form :model="signUpFormModel"
              :rules="rules"
              ref="form"
@@ -26,13 +25,22 @@
         <el-button type="primary" @click="submitForm">确 定</el-button>
       </div>
     </el-form>
+    <div class="nineImage">
+      <div class="choseTitle"> 请选出yuu</div>
+        <div v-for="(item,index) in imageNow"  class="showImage"  >
+            <img  :alt="item.key" :src="item.img" @click="choseImage($event,index)">
+            <div v-if="active == (''+index)" class="trueNow">
+              <i class="el-icon-check"></i>
+            </div>
+        </div>
+    </div>
   </el-dialog>
 </template>
 
 <script>
   import {mapActions, mapGetters}                from 'vuex';
   import UserTypes, {namespace as UserNamespace} from '@/store/User/types';
-
+  import imgs from  './imgs'
 
   export default {
     name    : "SignUpFormDialog",
@@ -64,6 +72,10 @@
       };
 
       return {
+        images:imgs,
+        imageNow:[],
+        active: '',
+        ifYUU:'',
         signUpFormModel: {
           username  : '',
           password  : '',
@@ -102,13 +114,26 @@
       ...mapActions(UserNamespace, {
         signUp: UserTypes.ACTION.SIGN_UP
       }),
+      // 选择九张图片
+      choseImage(data,index){
+        this.active = index
+        if( data.target.alt === 'noPlus'){
+          this.ifYUU = false
+        }else if(data.target.alt === 'plus'){
+          this.ifYUU = true
+        }
 
+      },
       submitForm() {
         this.$refs.form.validate((valid) => {
           if (valid) {
             const {username, password} = this.signUpFormModel;
             this.signUp({username, password});
-            this.dialogVisible = false;
+            if (this.ifYUU){
+              this.dialogVisible = false;
+            } else {
+                this.$message.error('请选择正确的yuu')
+            }
           } else {
             return false;
           }
@@ -121,7 +146,35 @@
           password  : '',
           repassword: ''
         }
+      },
+      // 随机取图
+      randNum(){
+        let _this =this
+        let Arr = [0,1,2,3,4,5,6,7,8]
+        let index
+        let out = []
+        let numberNow = []
+        _this.imageNow = []
+        _this.imageNow.length = 9
+        //console.log(_this.images)
+        while(Arr.length){
+           index = parseInt(Math.random() * Arr.length);
+          out = out.concat( Arr.splice(index, 1) );
+        }
+        // console.log(out);
+        for(let i=0;i<9;i++){
+          if (i===0){
+              _this.imageNow[out[i]] = _this.images.plus[parseInt(Math.random()*8)]
+          }else {
+                _this.imageNow[out[i]] = _this.images.noPlus[parseInt(Math.random()*35)]
+          }
+        }
       }
+    },
+    mounted(){
+      let _this = this
+      _this.randNum()
+
     }
   }
 </script>
@@ -134,6 +187,39 @@
 
     .el-button {
       width: 90%;
+    }
+  }
+  .nineImage{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .choseTitle{
+      width: 100%;
+      text-align: center;
+    }
+    .showImage{
+      width: 100px;
+      height: 130px;
+      border:1px solid #DADADA;
+      margin-top:10px;
+      .trueNow{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background:green;
+        margin-top: -26px;
+        margin-left: 80px;
+        border-radius: 10px;
+        color:#ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 </style>
