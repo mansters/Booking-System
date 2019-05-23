@@ -63,7 +63,7 @@
 
 <style scoped lang="scss">
 #DeleteDatabase /deep/ .el-dialog{
-    background:linear-gradient(to right,red , blue);
+    background:linear-gradient(to right,#9EE0F5 , #A3DCE1);
 
 }
 #DeleteDatabase /deep/ .el-dialog__header{
@@ -95,7 +95,7 @@
           padding: 30px 0px;
         .deleteSure{
           width: 100px;
-          background: linear-gradient(to right, red , blue);
+          background: linear-gradient(to right,#FC9C3B,#FFC95D);
           color: #ffffff;
           margin-left: 30px;
         }

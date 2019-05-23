@@ -80,6 +80,9 @@
       },
       showQrCode() {
         this.qrCodeDialogVisible = true;
+      },
+      showCode(){
+        this.sideBarVisible = !this.sideBarVisible
       }
     },
     components: {

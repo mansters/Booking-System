@@ -1,7 +1,35 @@
 <template>
     <div id="Add">
-      <Breadcrumb/>
+      <Breadcrumb :breadcrumb="breadcrumb"/>
       <div class="AddTable">
+        <div class="AddModule">
+          <div class="AddTitle">
+            新建车次
+          </div>
+          <div class="AddInput">
+            <el-input v-model="origin" placeholder="请输入出发地"></el-input>
+          </div>
+          <div class="AddInput">
+            <el-input v-model="destination" placeholder="请输入出发地"></el-input>
+          </div>
+          <div class="AddInput">
+            <el-date-picker
+              type="datetime"
+              v-model="departureTime"
+              placeholder="请选择出发日期时间">
+            </el-date-picker>
+          </div>
+          <div class="AddInput">
+            <el-date-picker
+              type="datetime"
+              v-model="arrivalTime"
+              placeholder="请选择到达日期时间">
+            </el-date-picker>
+          </div>
+          <div class="AddButton">
+            <el-button @click="addTrain" class="addButton">添加</el-button>
+          </div>
+        </div>
           <el-table
             :data="tableData"
             style="width: 100%"
@@ -33,31 +61,6 @@
             </el-table-column>
           </el-table>
         </div>
-        <div class="AddModule">
-          <div class="AddInput">
-            <el-input v-model="origin" placeholder="请输入出发地"></el-input>
-          </div>
-          <div class="AddInput">
-            <el-input v-model="destination" placeholder="请输入出发地"></el-input>
-          </div>
-          <div class="AddInput">
-            <el-date-picker
-              type="datetime"
-              v-model="departureTime"
-              placeholder="请选择出发日期时间">
-            </el-date-picker>
-          </div>
-          <div class="AddInput">
-            <el-date-picker
-              type="datetime"
-              v-model="arrivalTime"
-              placeholder="请选择到达日期时间">
-            </el-date-picker>
-          </div>
-          <div class="AddButton">
-           <el-button @click="addTrain">添加</el-button>
-          </div>
-        </div>
     </div>
 </template>
 
@@ -71,6 +74,9 @@
     },
     data () {
       return {
+        breadcrumb:{
+          secondName:'添加'
+        },
         tableData:[],
         origin:'',
         destination:'',
@@ -95,13 +101,39 @@
 
 <style scoped lang="scss">
   #Add /deep/ .el-table__empty-block{
-    display: none;
+    font-size: 24px;
+  }
+  #Add /deep/ .el-table th{
+    height: 60px;
+    font-size:24px;
+    line-height: 60px;
+    padding: 0;
+    background: #EAEEF1;
+  }
+  #Add /deep/ .el-table td{
+    height: 60px;
+    font-size:16px;
+    line-height: 60px;
+    padding: 0;
+  }
+  #Add /deep/ .el-table .cell{
+    line-height: 60px;
   }
 #Add{
   width: 60%;
   margin:auto;
   .AddTable{
 
+  }
+  .AddTitle{
+    width: 100%;
+    height: 60px;
+    background: url("../../../../static/images/titleBackground.png") no-repeat;
+    text-align: center;
+    font-size: 24px;
+    line-height: 60px;
+    font-weight: bold;
+    color:#ffffff;
   }
   .AddModule{
     width: 100%;
@@ -111,8 +143,13 @@
       float: left;
     }
     .AddButton{
-      width: 10%;
+      width: 20%;
       float: left;
+      .addButton{
+        width: 100%;
+        background: linear-gradient(to right,#FC9C3B,#FFC95D);
+        color: #ffffff;
+      }
     }
   }
 }

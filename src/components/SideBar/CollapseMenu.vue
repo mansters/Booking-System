@@ -55,14 +55,16 @@
           if (TypeUtils.isBoolean(this.visible)) {
             this.$emit('update:visible', val);
           }
-
           this.i_visible = val;
         }
       }
     },
     methods : {
       toggleMenu() {
-        this.internalVisible = !this.internalVisible;
+        let _this =this
+       // console.log('测试测')
+       _this.internalVisible = !_this.internalVisible;
+        _this.$parent.showCode()
       }
     }
   }

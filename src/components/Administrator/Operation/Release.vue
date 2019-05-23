@@ -1,6 +1,9 @@
 <template>
     <div id="Release">
-      <Breadcrumb/>
+      <Breadcrumb :breadcrumb="breadcrumb"/>
+      <div class="ReleaseTitle">
+          车次发布
+      </div>
       <el-table
         :data="tableData"
         style="width: 100%"
@@ -39,11 +42,11 @@
           </template>
         </el-table-column>
         <el-table-column
-          label="删除"
+          label="修改"
           align="center"
         >
           <template slot-scope="scope">
-            <el-button @click="release(scope.row)">发布</el-button>
+            <el-button @click="release(scope.row)" class="ReleaseButton">发布</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -61,6 +64,9 @@
     },
     data(){
       return{
+        breadcrumb:{
+          secondName:'修改'
+        },
         tableData:Train
       }
     },
@@ -76,8 +82,33 @@
 </script>
 
 <style scoped lang="scss">
+  #Release /deep/ .el-table th{
+    height: 60px;
+    font-size:24px;
+    line-height: 60px;
+    padding: 0;
+    background: #EAEEF1;
+  }
+  #Release  /deep/ .el-table .cell{
+    line-height: 60px;
+  }
   #Release{
     width:60%;
     margin:auto;
+    .ReleaseTitle{
+      width: 100%;
+      height: 60px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 60px;
+      font-weight: bold;
+      color:#ffffff;
+      background: url("../../../../static/images/titleBackground.png") no-repeat;
+    }
+    .ReleaseButton{
+      width: 100%;
+      background: linear-gradient(to right,#FC9C3B,#FFC95D);
+      color: #ffffff;
+    }
   }
 </style>

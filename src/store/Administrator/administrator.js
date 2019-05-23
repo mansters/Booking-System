@@ -1,9 +1,11 @@
 import {
   OPEN_DATABASE,
-  CLOSE_DATABASE
+  CLOSE_DATABASE,
+  SET_SHOW_PERMISSIONS
 }from './type'
 const state = {
-    deleteDatabase:false
+    deleteDatabase:false,
+    showPermissions:{}
 }
 const actions ={
   openDeleteDatabase:({commit})=>{
@@ -11,6 +13,9 @@ const actions ={
   },
   closeDeleteDatabase:({commit})=>{
     commit(CLOSE_DATABASE)
+  },
+  setShowPermissions:({commit},value)=>{
+    commit(SET_SHOW_PERMISSIONS,value)
   }
 }
 const mutations = {
@@ -19,6 +24,9 @@ const mutations = {
   },
   [CLOSE_DATABASE](state){
     state.deleteDatabase = false
+  },
+  [SET_SHOW_PERMISSIONS](state,value){
+    state.showPermissions = value
   }
 }
 

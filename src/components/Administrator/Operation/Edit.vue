@@ -1,6 +1,9 @@
 <template>
     <div id="Edit">
-      <Breadcrumb/>
+      <Breadcrumb :breadcrumb="breadcrumb"/>
+      <div class="EditTitle">
+            修改车次
+      </div>
       <el-table
         :data="tableData"
         style="width: 100%"
@@ -51,7 +54,7 @@
           align="center"
         >
           <template slot-scope="scope">
-            <el-button @click="edit(scope.row)">修改</el-button>
+            <el-button @click="edit(scope.row)" class="EditButton">修改</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -68,6 +71,9 @@
     },
     data(){
       return{
+        breadcrumb:{
+          secondName:'编辑'
+        },
         tableData:Train
       }
     },
@@ -89,8 +95,33 @@
 </script>
 
 <style scoped lang="scss">
+  #Edit /deep/ .el-table th{
+    height: 60px;
+    font-size:24px;
+    line-height: 60px;
+    padding: 0;
+    background: #EAEEF1;
+  }
+  #Edit  /deep/ .el-table .cell{
+    line-height: 60px;
+  }
   #Edit{
     width: 60%;
     margin:auto;
+    .EditTitle{
+      width: 100%;
+      height: 60px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 60px;
+      font-weight: bold;
+      color:#ffffff;
+      background: url("../../../../static/images/titleBackground.png") no-repeat;
+    }
+    .EditButton{
+      width: 100%;
+      background: linear-gradient(to right,#FC9C3B,#FFC95D);
+      color: #ffffff;
+    }
   }
 </style>

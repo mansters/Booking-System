@@ -97,6 +97,9 @@
       ...mapActions(UserNamespace, {
         login: UserTypes.ACTION.LOGIN
       }),
+      ...mapActions('administrator',[
+        'setShowPermissions'
+      ]),
       // 验证用户是否存在
       isUser(data){
         console.log(data)
@@ -134,6 +137,8 @@
             User.forEach( item =>{
              if (item.username === this.loginFormModel.username) {
                this.routerTO(item.permissions)
+               console.log(item)
+               this.setShowPermissions(item)
              }
             })
           } else {
@@ -145,7 +150,7 @@
       routerTO(value){
         switch (value) {
           case '0':
-            this.$router.push({path:'Administrator'})
+            this.$router.push({path:'Add'})
             break
           case  '1':
             this.$router.push({path:'Administrator'})

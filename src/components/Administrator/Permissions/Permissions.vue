@@ -1,7 +1,7 @@
 <template>
     <div id="Permissions">
         <el-row>
-          <Breadcrumb/>
+          <Breadcrumb :breadcrumb="breadcrumb"/>
           <div class="PermissionsTitle">
               人员管理表
           </div>
@@ -26,7 +26,10 @@
               align="center"
             >
               <template slot-scope="scope">
-                  <el-button>变更</el-button><span>升级为管理员</span>
+                  <el-button @click="changeIt(scope.row)"  class="changeButton">
+                    变更&nbsp;&nbsp;
+                    <span class="prompt">{{scope.row.word}}</span>
+                  </el-button>
               </template>
             </el-table-column>
           </el-table>
@@ -43,9 +46,24 @@
     },
     data(){
       return{
+        breadcrumb:{
+          secondName:'管理权限'
+        },
         tableData:[
-          {id:'1',name:'普通'}
+          {id:'1',name:'普通人员',word:'升级为管理员'},
+          {id:'2',name:'管理员',word:'降级为普通人员'}
         ]
+      }
+    },
+    methods:{
+      changeIt(data){
+        if(data.name === '管理员'){
+          data.name = '普通人员'
+          data.word = '升级为管理员'
+        }else {
+          data.name = '管理员'
+          data.word = '降级为普通人员'
+        }
       }
     }
   }
@@ -57,6 +75,7 @@
     font-size:24px;
     line-height: 60px;
     padding: 0;
+    background: #EAEEF1;
   }
   #Permissions /deep/ .el-table .cell{
     line-height: 60px;
@@ -72,7 +91,16 @@
         line-height: 60px;
         font-weight: bold;
         color:#ffffff;
-        background-color: #0077aa;
+        background: url("../../../../static/images/titleBackground.png") no-repeat;
+      }
+      .changeButton{
+        width: 100%;
+        background: linear-gradient(to right,#FC9C3B,#FFC95D);
+        color: #ffffff;
+        .prompt{
+          font-size: 10px;
+          color: #ff0000;
+        }
       }
     }
 </style>

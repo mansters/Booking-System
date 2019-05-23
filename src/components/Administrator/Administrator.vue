@@ -25,7 +25,17 @@
                 <el-menu-item index="2-4">修改车次</el-menu-item>
               </el-submenu>
               <el-menu-item index="3">删库跑路</el-menu-item>
-              <el-menu-item index="4">修改管理员权限</el-menu-item>
+              <el-menu-item v-if="showPermissions.permissions === '1'" index="4">修改管理员权限</el-menu-item>
+              <el-submenu index="5">
+                <template slot="title">
+                  <span class="iconfont icon-caidan07" style="font-size: 37px"></span>
+                </template>
+                <el-menu-item index="5-1">
+                  <span v-if="showPermissions.permissions === '0'">尊敬的管理员{{showPermissions.username}}</span>
+                  <span v-if="showPermissions.permissions === '1'">尊敬的超级管理员{{showPermissions.username}}</span>
+                </el-menu-item>
+                <el-menu-item index="5-2">退出</el-menu-item>
+              </el-submenu>
             </el-menu>
           </el-row>
         </el-header>
@@ -44,7 +54,12 @@
   export default {
     name: 'Administrator',
     components:{
-      DeleteDatabase
+      DeleteDatabase,
+    },
+    computed:{
+      ...mapState('administrator',{
+          showPermissions:state => state.showPermissions
+      })
     },
     data(){
       return{
@@ -76,6 +91,8 @@
               case '4':
                 this.$router.push({path:'/Administrator'})
                 break
+              case '5-2':
+                this.$router.push({path:'/'})
               default:
                 break
             }

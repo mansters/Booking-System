@@ -1,6 +1,9 @@
 <template>
     <div id="Delete">
-      <Breadcrumb/>
+      <Breadcrumb :breadcrumb="breadcrumb"/>
+      <div class="DeleteTitle">
+            车次删除
+      </div>
       <el-table
         :data="tableData"
         style="width: 100%"
@@ -43,7 +46,7 @@
           align="center"
         >
           <template slot-scope="scope">
-              <el-button @click="remove(scope.row)">删除</el-button>
+              <el-button @click="remove(scope.row)" class="DeleteButton">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -61,6 +64,9 @@
     },
     data(){
       return{
+        breadcrumb:{
+          secondName:'删除'
+        },
         tableData:Train
       }
     },
@@ -81,8 +87,33 @@
 </script>
 
 <style scoped lang="scss">
+  #Delete /deep/ .el-table th{
+    height: 60px;
+    font-size:24px;
+    line-height: 60px;
+    padding: 0;
+    background: #EAEEF1;
+  }
+  #Delete  /deep/ .el-table .cell{
+    line-height: 60px;
+  }
     #Delete{
       width: 60%;
-      margin:auto
+      margin:auto;
+      .DeleteTitle{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 60px;
+        font-weight: bold;
+        color:#ffffff;
+        background: url("../../../../static/images/titleBackground.png") no-repeat;
+      }
+      .DeleteButton{
+        width: 100%;
+        background: linear-gradient(to right,#FC9C3B,#FFC95D);
+        color: #ffffff;
+      }
     }
 </style>
