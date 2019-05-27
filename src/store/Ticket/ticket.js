@@ -91,7 +91,7 @@ const actions ={
   closeQr:({commit})=>{
       commit(CLOSE_QR)
   },
-  openRobShow:({commit})=>{
+  robShow:({commit})=>{
       commit(OPEN_ROB_SHOW)
   },
   closeRobShow:({commit})=>{

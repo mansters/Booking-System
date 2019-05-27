@@ -85,7 +85,7 @@
         'openRefund',
         'openEdorse',
         'openQuery',
-        'openRobShow'
+        'robShow'
       ]),
       onSelectMenu(index) {
         switch (index) {
@@ -113,7 +113,7 @@
             this.$router.push({path:'/BookingTicket'})
             break
           case '2-5':
-            this.openRobShow()
+            this.robShow()
             break
           default :
             break

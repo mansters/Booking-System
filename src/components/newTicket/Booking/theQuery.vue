@@ -75,7 +75,7 @@
     methods:{
       ...mapActions('ticket',[
         'openSeats',
-        'openRobShow'
+        'robShow'
       ]),
       search(){
         this.timeData = ticketTime
@@ -87,7 +87,7 @@
           this.openSeats()
       },
       showRob(){
-          this.openRobShow()
+          this.robShow()
       }
     }
   }
