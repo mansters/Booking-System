@@ -5,7 +5,7 @@ import {
 }from './type'
 const state = {
     deleteDatabase:false,
-    showPermissions:{}
+    showPermissions:{},
 }
 const actions ={
   openDeleteDatabase:({commit})=>{

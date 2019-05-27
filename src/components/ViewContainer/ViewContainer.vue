@@ -20,6 +20,7 @@
           </el-submenu>
           <el-menu-item index="2-2">退票</el-menu-item>
           <el-menu-item index="2-3">改签</el-menu-item>
+          <el-menu-item index="2-5">竞拍</el-menu-item>
           <el-menu-item index="2-4">信息查询</el-menu-item>
         </el-submenu>
         <el-menu-item index="3">更新日志</el-menu-item>
@@ -46,6 +47,7 @@
       <SignUpFormDialog :visible.sync="signUpDialogVisible"/>
     </template>
    <MainBox/>
+    <RobTickets/>
   </el-container>
 </template>
 
@@ -59,7 +61,7 @@
   import UserDropdown     from './UserDropdown';
   import SideBar          from '@/components/SideBar/SideBar'
   import MainBox           from '@/components/Ticket/index'
-
+  import RobTickets       from '@/components/newTicket/Booking/RobTickets'
   export default {
     name      : "ViewContainer",
     data() {
@@ -82,7 +84,8 @@
         'openTwoWay',
         'openRefund',
         'openEdorse',
-        'openQuery'
+        'openQuery',
+        'openRobShow'
       ]),
       onSelectMenu(index) {
         switch (index) {
@@ -108,6 +111,10 @@
           case '2-4':
             // this.openQuery()
             this.$router.push({path:'/BookingTicket'})
+            break
+          case '2-5':
+            this.openRobShow()
+            break
           default :
             break
         }
@@ -119,7 +126,8 @@
       SignUpFormDialog,
       UserDropdown,
       SideBar,
-      MainBox
+      MainBox,
+      RobTickets
     }
   }
 </script>

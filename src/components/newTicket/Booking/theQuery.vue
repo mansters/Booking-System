@@ -18,7 +18,6 @@
             :data="timeData"
             style="width: 100%"
             border
-            @row-click="choseSeat"
           >
             <el-table-column
               prop="departureTime"
@@ -32,16 +31,40 @@
               align="center"
             >
             </el-table-column>
+            <el-table-column
+              prop="ticketNumber"
+              label="剩余票数"
+              align="center"
+            >
+            </el-table-column>
+            <el-table-column
+              label="购票"
+              align="center"
+            >
+              <template slot-scope="scope">
+                <span v-if="scope.row.ticketNumber>1">
+                    <el-button @click="choseSeat" class="ticketButton">购票</el-button>
+                </span>
+                <span v-if="scope.row.ticketNumber <=1">
+                  <el-button @click="showRob" class="ticketButton">抢票</el-button>
+                </span>
+              </template>
+            </el-table-column>
           </el-table>
         </el-row>
+      <RobTickets/>
     </div>
 </template>
 
 <script>
   import ticketTime from '../../Ticket/TicketTime'
+  import RobTickets from './RobTickets'
   import {mapActions,mapState} from 'vuex'
   export default {
     name: 'theQuery',
+    components:{
+      RobTickets
+    },
     data(){
       return{
         timeData:[],
@@ -51,13 +74,20 @@
     },
     methods:{
       ...mapActions('ticket',[
-        'openSeats'
+        'openSeats',
+        'openRobShow'
       ]),
       search(){
         this.timeData = ticketTime
+        this.timeData.forEach( res=>{
+          res.ticketNumber = parseInt(Math.random()*99)
+        })
       },
       choseSeat(){
           this.openSeats()
+      },
+      showRob(){
+          this.openRobShow()
       }
     }
   }
@@ -94,6 +124,11 @@
       width: 100%;
       background:linear-gradient(to right,#FC9C3B,#FFC95D);
     }
+  }
+  .ticketButton{
+    width: 100%;
+    background: linear-gradient(to right,#FC9C3B,#FFC95D);
+    color: #ffffff;
   }
 }
 </style>
