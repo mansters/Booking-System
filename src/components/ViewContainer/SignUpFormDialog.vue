@@ -5,6 +5,7 @@
     width="400px"
     @close="onDialogClose"
     append-to-body
+    custom-class="registered"
   >
     <el-form :model="signUpFormModel"
              :rules="rules"
@@ -20,19 +21,18 @@
       <el-form-item label="确认密码" prop="repassword">
         <el-input type="password" v-model="signUpFormModel.repassword"></el-input>
       </el-form-item>
-
-      <div class="sign-up-btn-group">
-        <el-button type="primary" @click="submitForm">确 定</el-button>
-      </div>
     </el-form>
     <div class="nineImage">
-      <div class="choseTitle"> 请选出yuu</div>
+      <div class="choseTitle"> 请选出<span class="showYuu">yuu</span></div>
         <div v-for="(item,index) in imageNow"  class="showImage"  >
             <img  :alt="item.key" :src="item.img" @click="choseImage($event,index)">
             <div v-if="active == (''+index)" class="trueNow">
               <i class="el-icon-check"></i>
             </div>
         </div>
+    </div>
+    <div class="sign-up-btn-group">
+      <el-button class="sign-up-button" type="primary" @click="submitForm">确 定</el-button>
     </div>
   </el-dialog>
 </template>
@@ -179,7 +179,27 @@
   }
 </script>
 
-<style lang='scss' rel="stylesheet/scss" type="text/scss" scoped>
+<style lang='scss' rel="stylesheet/scss" type="text/scss" >
+  .registered{
+    background: #ffffff;
+  }
+  .registered .el-dialog__header{
+    border-bottom: 2px solid #44A3FC;
+    color: #44A3FC;
+  }
+  .registered .el-dialog__title{
+    color: #44A3FC;
+    font-weight: bold;
+  }
+  .registered .el-form-item__label{
+    text-align:left;
+  }
+  .registered .sign-up-button{
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right,#FC9C3B,#FFC95D);
+    border: none
+  }
   .sign-up-btn-group {
     display: flex;
     justify-content: space-around;
@@ -195,21 +215,31 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    border: 1px solid #969896;
+    padding-bottom: 10px;
     .choseTitle{
       width: 100%;
-      text-align: center;
+      text-align: left;
+      color:#4D5873;
+      font-weight:400;
+      line-height: 21px;
+      .showYuu{
+        color:#61ABF2;
+        font-weight:bold;
+      }
     }
     .showImage{
-      width: 100px;
-      height: 130px;
+      width: 106px;
+      height: 60px;
       border:1px solid #DADADA;
       margin-top:10px;
+      border:1px dashed  #D9DDE4;
       .trueNow{
         position: absolute;
         width: 20px;
         height: 20px;
-        background:green;
-        margin-top: -26px;
+        background:#42E847;
+        margin-top: -60px;
         margin-left: 80px;
         border-radius: 10px;
         color:#ffffff;

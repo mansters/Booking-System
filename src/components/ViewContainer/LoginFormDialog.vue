@@ -5,6 +5,7 @@
     width="400px"
     @close="onDialogClose"
     append-to-body
+    custom-class="loginDialog"
   >
 
     <el-form :model="loginFormModel"
@@ -20,8 +21,8 @@
       </el-form-item>
 
       <div class="login-btn-group">
-        <el-button @click="openSignUpDialog">注册</el-button>
-        <el-button type="primary" @click="submitForm">登录</el-button>
+        <el-button  type="primary" @click="openSignUpDialog">注册</el-button>
+        <el-button  @click="submitForm" class="loginButton">登录</el-button>
       </div>
     </el-form>
   </el-dialog>
@@ -170,7 +171,20 @@
   }
 </script>
 
-<style lang='scss' rel="stylesheet/scss" type="text/scss" scoped>
+<style lang='scss' rel="stylesheet/scss" type="text/scss" >
+  .loginDialog .el-dialog__header{
+    border-bottom: 2px solid #44A3FC;
+  }
+  .loginDialog .el-dialog__title{
+    color:#44A3FC;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .loginDialog .loginButton{
+    background: linear-gradient(to right,#FC9C3B,#FFC95D);
+    border: none;
+    color: #ffffff;
+  }
   .login-btn-group {
     display: flex;
     justify-content: space-around;

@@ -6,28 +6,30 @@
           <div class="AddTitle">
             新建车次
           </div>
-          <div class="AddInput">
-            <el-input v-model="origin" placeholder="请输入出发地"></el-input>
-          </div>
-          <div class="AddInput">
-            <el-input v-model="destination" placeholder="请输入出发地"></el-input>
-          </div>
-          <div class="AddInput">
-            <el-date-picker
-              type="datetime"
-              v-model="departureTime"
-              placeholder="请选择出发日期时间">
-            </el-date-picker>
-          </div>
-          <div class="AddInput">
-            <el-date-picker
-              type="datetime"
-              v-model="arrivalTime"
-              placeholder="请选择到达日期时间">
-            </el-date-picker>
-          </div>
-          <div class="AddButton">
-            <el-button @click="addTrain" class="addButton">添加</el-button>
+          <div class="AddInputs">
+            <div class="AddInput">
+              <el-input v-model="origin" placeholder="请输入出发地"></el-input>
+            </div>
+            <div class="AddInput">
+              <el-input v-model="destination" placeholder="请输入出发地"></el-input>
+            </div>
+            <div class="AddInput">
+              <el-date-picker
+                type="datetime"
+                v-model="departureTime"
+                placeholder="请选择出发日期时间">
+              </el-date-picker>
+            </div>
+            <div class="AddInput">
+              <el-date-picker
+                type="datetime"
+                v-model="arrivalTime"
+                placeholder="请选择到达日期时间">
+              </el-date-picker>
+            </div>
+            <div class="AddButton">
+              <el-button @click="addTrain" class="addButton">添加</el-button>
+            </div>
           </div>
         </div>
           <el-table
@@ -119,6 +121,9 @@
   #Add /deep/ .el-table .cell{
     line-height: 60px;
   }
+  #Add /deep/ .el-date-editor.el-input, .el-date-editor.el-input__inner{
+    width: 100%;
+  }
 #Add{
   width: 60%;
   margin:auto;
@@ -138,13 +143,23 @@
   .AddModule{
     width: 100%;
     border:1px solid #EBEEF5;
+
+    .AddInputs{
+      width: 100%;
+      height: 84px;
+      background: #EAEEF1;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #969896;
+    }
     .AddInput{
-      width: 20%;
-      float: left;
+      margin-top: 24px;
+      width: 250px;
     }
     .AddButton{
-      width: 20%;
-      float: left;
+      width: 74px;
+      margin-top: 24px;
       .addButton{
         width: 100%;
         background: linear-gradient(to right,#FC9C3B,#FFC95D);

@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="showSeat">
-            <el-button class="seatQuery" @click="openSeats">查询</el-button>
+            <el-button class="seatQuery" @click="openTrains">查询</el-button>
           </div>
         </el-row>
     </div>
@@ -96,13 +96,17 @@
     },
     methods:{
       ...mapActions('ticket',[
-        'openSeats'
+        'openSeats',
+        'showChoseTime'
       ]),
       changeCity(){
         let _this = this
         let city = _this.form.departure
         _this.form.departure = _this.form.arrival
         _this.form.arrival = city
+      },
+      openTrains(){
+        this.showChoseTime()
       }
     }
   }

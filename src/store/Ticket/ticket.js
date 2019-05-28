@@ -18,7 +18,9 @@ import {
   OPEN_QR,
   CLOSE_QR,
   OPEN_ROB_SHOW,
-  ClOSE_ROB_SHOW
+  ClOSE_ROB_SHOW,
+  SHOW_CHOSE,
+  CLOSE_CHOSE
 } from './type'
 
 const state = {
@@ -31,7 +33,8 @@ const state = {
   showQuery:false,
   toEndorse:false,
   qrShow:false,
-  robShow:false
+  robShow:false,
+  choseTime:false,
 }
 const actions ={
     //打开单程
@@ -96,7 +99,13 @@ const actions ={
   },
   closeRobShow:({commit})=>{
       commit(ClOSE_ROB_SHOW)
-  }
+  },
+  showChoseTime:({commit})=>{
+      commit(SHOW_CHOSE)
+  },
+  closeChoseTime:({commit})=>{
+  commit(CLOSE_CHOSE)
+  },
 }
 const mutations = {
   [OPEN_ONE_WAY](state){
@@ -158,6 +167,12 @@ const mutations = {
   },
   [ClOSE_ROB_SHOW](state){
     state.robShow = false
+  },
+  [SHOW_CHOSE](state){
+    state.choseTime = true
+  },
+  [CLOSE_CHOSE](state){
+    state.choseTime = false
   }
 }
 

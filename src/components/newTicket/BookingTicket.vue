@@ -8,6 +8,7 @@
         <el-tab-pane label="改签"     name="4"><NewEndorse/></el-tab-pane>
         <el-tab-pane label="信息查询" name="5"><NewQuery/></el-tab-pane>
       </el-tabs>
+      <ChoseTime/>
     </div>
 </template>
 
@@ -18,6 +19,8 @@
   import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
   import NewEndorse from  './Booking/Endorse'
   import NewQuery   from './Booking/theQuery'
+  import ChoseTime from './Booking/ChoseTime'
+
   export default {
     name: 'BookingTicket',
     components:{
@@ -26,7 +29,8 @@
       NewTwoWay,
       NewRefund,
       NewEndorse,
-      NewQuery
+      NewQuery,
+      ChoseTime
     },
     data(){
       return{

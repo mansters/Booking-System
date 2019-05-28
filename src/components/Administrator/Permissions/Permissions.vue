@@ -11,7 +11,7 @@
             style="width: 100%">
             <el-table-column
               prop="id"
-              label="id"
+              label="用户名"
               align="center"
               >
             </el-table-column>
@@ -22,13 +22,18 @@
             >
             </el-table-column>
             <el-table-column
-              label="变更权限"
+              label="权限变更"
+              align="center"
+              prop="word"
+            >
+            </el-table-column>
+            <el-table-column
+              label="操作"
               align="center"
             >
               <template slot-scope="scope">
                   <el-button @click="changeIt(scope.row)"  class="changeButton">
-                    变更&nbsp;&nbsp;
-                    <span class="prompt">{{scope.row.word}}</span>
+                    变更
                   </el-button>
               </template>
             </el-table-column>
@@ -50,8 +55,8 @@
           secondName:'管理权限'
         },
         tableData:[
-          {id:'1',name:'普通人员',word:'升级为管理员'},
-          {id:'2',name:'管理员',word:'降级为普通人员'}
+          {id:'admin',name:'普通人员',word:'升级为管理员'},
+          {id:'admin1',name:'管理员',word:'降级为普通人员'}
         ]
       }
     },
