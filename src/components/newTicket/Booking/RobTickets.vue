@@ -1,6 +1,6 @@
 <template>
   <el-dialog custom-class="counting-dialog"
-             :visible.sync="robTicket"
+             :visible.sync="robTickets"
              width="580px"
              append-to-body
              :before-close="closeNow"
@@ -85,7 +85,7 @@
     },
     computed:{
         ...mapState('ticket',{
-          robTicket:state => state.robShow
+          robTickets:state => state.robShow
         })
     },
     data() {
@@ -102,7 +102,7 @@
         let _this = this
         const date = Date.now();
         console.log(date)
-        _this.time =  60 * 60 *2
+        _this.time =  1000 * 60 * 60 *2
         // _this.time = date.getTime()
         // console.log(_this.time)
         console.log(_this.time)
@@ -118,7 +118,7 @@
       }
     },
     watch : {
-      robTicket(val){
+      robTickets(val){
         if (val){
           this.count()
         }
