@@ -125,7 +125,7 @@
       ]),
       choseCarriage(data){
         let _this =this
-        console.log(data.target.classList)
+        // console.log(data.target.classList)
         let classNow = [...data.target.classList]
         console.log(classNow.indexOf('checkedBody'))
         if (classNow.indexOf('checkedBody') ===-1){
@@ -190,6 +190,39 @@
       _this.trains = document.getElementsByClassName('trainBody')
       _this.seats = document.getElementsByClassName('seat')
       _this.showChose(_this.testAdd)
+    },
+    watch:{
+      setShow(val){
+        if (val){
+          let teains = document.getElementsByClassName('trainBody')
+          let seats = document.getElementsByClassName('seat')
+         // console.log(teains)
+          teains = [...teains]
+          seats = [...seats]
+          teains.forEach( res =>{
+            if ([...res.classList].indexOf('checkedBody') !== -1) {
+                  res.classList.remove('checkedBody')
+                  res.classList.add('defaultBody')
+              console.log(res.classList)
+            }else if ([...res.classList].indexOf('fullBody') !== -1) {
+              res.classList.remove('fullBody')
+              res.classList.add('defaultBody')
+            }else {
+              res.classList.remove('fullBody')
+              res.classList.remove('checkedBody')
+              res.classList.add('defaultBody')
+            }
+          })
+          seats.forEach( item=>{
+          let  classLists = [...item.classList]
+            if (classLists.indexOf('seatChecked') !== -1) {
+              item.classList.remove('seatChecked')
+              item.classList.add('seatDefault')
+            }
+          })
+
+        }
+      }
     }
   }
 </script>

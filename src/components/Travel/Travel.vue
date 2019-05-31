@@ -1,7 +1,7 @@
 <template>
   <div id="Travel">
     <div class="booking" @click="booking">
-     >  一场说走就走的旅行 - 你的专属目的地  <
+      <img src="../../../static/images/travel/word.png">
     </div>
   </div>
 </template>
@@ -29,7 +29,7 @@
 <style scoped lang="scss">
   .booking{
     width: 100%;
-    height: 30px;
+    height: 60px;
     font-size: 22px;
     line-height: 30px;
     color:#fff;
@@ -37,5 +37,8 @@
     margin-top: 14px;
     letter-spacing: 2px;
     cursor: pointer;
+    img{
+      height: 60px;
+    }
   }
 </style>
