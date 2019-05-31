@@ -24,7 +24,7 @@
     align-items: center;
     border-radius: 10px;
     transition: all .5s;
-
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
     &:hover {
       background-color: rgba(110, 120, 130, 0.6);
     }

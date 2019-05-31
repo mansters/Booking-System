@@ -51,6 +51,7 @@
   import DeleteDatabase from './DeleteDatabase/DeleteDatabase'
   import imgLogo     from '@/assets/logo.png';
   import {mapActions,mapState} from 'vuex'
+  import UserTypes, {namespace as UserNamespace} from '@/store/User/types';
   export default {
     name: 'Administrator',
     components:{
@@ -59,7 +60,10 @@
     computed:{
       ...mapState('administrator',{
           showPermissions:state => state.showPermissions
-      })
+      }),
+      ...mapState(UserNamespace, [
+        'loginUser'
+      ])
     },
     data(){
       return{
@@ -71,6 +75,9 @@
       ...mapActions('administrator',[
             'openDeleteDatabase'
       ]),
+      ...mapActions(UserNamespace, {
+        logout: UserTypes.ACTION.LOGOUT
+      }),
       handleSelect(index, indexPath){
             switch (index) {
               case '2-1':
@@ -92,6 +99,7 @@
                 this.$router.push({path:'/Administrator'})
                 break
               case '5-2':
+                this.logout()
                 this.$router.push({path:'/'})
               default:
                 break
