@@ -58,6 +58,7 @@
    <MainBox/>
     <RobTickets/>
     <UserNow/>
+    <UserOrder/>
   </el-container>
 </template>
 
@@ -72,6 +73,7 @@
   import SideBar          from '@/components/SideBar/SideBar'
   import MainBox           from '@/components/Ticket/index'
   import RobTickets       from '@/components/newTicket/Booking/RobTickets'
+  import UserOrder        from '../UserInformation/userOrder'
   export default {
     name      : "ViewContainer",
     data() {
@@ -98,7 +100,8 @@
         'robShow'
       ]),
       ...mapActions('userInformation',[
-        'showUserNow'
+        'showUserNow',
+        'openOrder'
       ]),
       onSelectMenu(index) {
         switch (index) {
@@ -132,6 +135,9 @@
             console.log('测试测试')
             this.showUserNow()
             break
+          case 'userOrder':
+            this.openOrder()
+            break
           default :
             break
         }
@@ -145,7 +151,8 @@
       SideBar,
       MainBox,
       RobTickets,
-      UserNow
+      UserNow,
+      UserOrder
     }
   }
 </script>
