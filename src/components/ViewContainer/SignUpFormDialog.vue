@@ -21,6 +21,12 @@
       <el-form-item label="确认密码" prop="repassword">
         <el-input type="password" v-model="signUpFormModel.repassword"></el-input>
       </el-form-item>
+      <el-form-item label="邮箱" prop="email">
+        <el-input type="password" v-model="signUpFormModel.email"></el-input>
+      </el-form-item>
+      <el-form-item label="电话" prop="phone">
+        <el-input type="password" v-model="signUpFormModel.phone"></el-input>
+      </el-form-item>
     </el-form>
     <div class="nineImage">
       <div class="choseTitle"> 请选出<span class="showYuu">yuu</span></div>
@@ -79,7 +85,8 @@
         signUpFormModel: {
           username  : '',
           password  : '',
-          repassword: ''
+          repassword: '',
+          email:'',
         },
         rules          : {
           username  : [
@@ -92,6 +99,12 @@
           repassword: [
             {required: true, message: '请再次输入密码', trigger: 'blur'},
             {validator: checkRepassword, trigger: 'blur'}
+          ],
+          email:[
+            {required: true, message: '请输入邮箱', trigger: 'blur'},
+          ],
+          phone:[
+            {required: true, message: '请输入电话', trigger: 'blur'},
           ]
         }
       }
