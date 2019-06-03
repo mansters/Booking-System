@@ -16,6 +16,9 @@ import Add        from '@/components/Administrator/Operation/Add'
 import Delete      from '@/components/Administrator/Operation/Delete'
 import Edit        from '@/components/Administrator/Operation/Edit'
 import Release    from '@/components/Administrator/Operation/Release'
+import QueryTicket from '@/components/newTicket/QueryTicket'
+import OperationTicket from '@/components/newTicket/OperationTicket'
+
 Vue.use(Router)
 
 const router = new Router({
@@ -29,7 +32,9 @@ const router = new Router({
         {path:'/TravellersAre',name:'TravellersAre',component:TravellersAre},
         {path:'/Exclusive',name:'Exclusive',component:Exclusive},
         {path:'/BookingTicket',name:'BookingTicket',component:BookingTicket},
-        {path:'/RobTickets',name:'RobTickets',component:RobTickets}
+        {path:'/RobTickets',name:'RobTickets',component:RobTickets},
+        {path:'/QueryTicket',name:'QueryTicket',component:QueryTicket},
+        {path:'/OperationTicket',name:'OperationTicket',component:OperationTicket}
       ]
     },
     {

@@ -118,21 +118,20 @@
             break
           case '2-2':
             // this.openRefund()
-            this.$router.push({path:'/BookingTicket'})
+            this.$router.push({path:'/OperationTicket'})
             break
           case '2-3':
             // this.openEdorse()
-            this.$router.push({path:'/BookingTicket'})
+            this.$router.push({path:'/OperationTicket'})
             break
           case '2-4':
             // this.openQuery()
-            this.$router.push({path:'/BookingTicket'})
+            this.$router.push({path:'/QueryTicket'})
             break
           case '2-5':
             this.robShow()
             break
           case 'userInformation':
-            console.log('测试测试')
             this.showUserNow()
             break
           case 'userOrder':
